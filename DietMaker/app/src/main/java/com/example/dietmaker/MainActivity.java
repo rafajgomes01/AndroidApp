@@ -85,30 +85,5 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem Item) {
-        int id = item.getItemId();
 
-        if (id == R.id.nav_home){
-            Toast.makeText(MainActivity.this, "Teste do Menu", Toast.LENGTH_SHORT).show();
-
-           /* Intent intent == new Intent(MainActivity.this, NovaActivity.class);
-            startActivity(intent);*/
-
-
-        } else if (id == R.id.nav_gallery){
-
-        } else if (id == R.id.nav_gallery){
-
-        } else if (id == R.id.nav_slideshow){
-
-        } else if (id == R.id.nav_tools){
-
-        } else if (id == R.id.nav_share){
-
-        } else if (id == R.id.nav_send){
-
-        }
-    }
 }
