@@ -23,12 +23,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-
+    ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        listView=(ListView)findViewById(R.id.listview);
+
+        ArrayList<String> arrayList=new ArrayList<>();
+
+
+        arrayList.add("oi");
+        arrayList.add("oi");
+        arrayList.add("oi");
+        arrayList.add("oi");
+        arrayList.add("oi");
+        arrayList.add("oi");
+        arrayList.add("oi");
+        arrayList.add("oi");
+
+        ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,arrayList);
+        listView.setAdapter((arrayAdapter));
     }
 
     @Override
@@ -81,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+
+
+
     }
 
 
