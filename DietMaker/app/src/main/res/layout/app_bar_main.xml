@@ -20,6 +20,8 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include
+        layout="@layout/content_main"
+        android:background="#8BC34A" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
