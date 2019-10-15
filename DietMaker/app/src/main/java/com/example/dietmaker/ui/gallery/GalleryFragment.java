@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -15,6 +14,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.dietmaker.R;
+import com.example.dietmaker.ui.gallery.GalleryViewModel;
 
 import java.util.ArrayList;
 
@@ -38,14 +38,14 @@ public class GalleryFragment extends Fragment {
         ArrayList<String> arrayList=new ArrayList<>();
 
 
-        arrayList.add("oi");
-        arrayList.add("oi");
-        arrayList.add("oi");
-        arrayList.add("oi");
-        arrayList.add("oi");
-        arrayList.add("oi");
-        arrayList.add("oi");
-        arrayList.add("oi");
+        arrayList.add("Desjejum");
+        arrayList.add("Lanche");
+        arrayList.add("Almoço");
+        arrayList.add("Lanche da tarde");
+        arrayList.add("Pré treino");
+        arrayList.add("Pós treino");
+        arrayList.add("Jantar");
+        arrayList.add("Ceia");
 
 
         ArrayAdapter arrayAdapter=new ArrayAdapter(getContext(), android.R.layout.simple_expandable_list_item_1,arrayList);
