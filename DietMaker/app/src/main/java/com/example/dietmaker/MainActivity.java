@@ -12,6 +12,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.dietmaker.ui.gallery.GalleryFragment;
+import com.example.dietmaker.ui.gallery.GalleryViewModel;
 import com.example.dietmaker.ui.send.SendFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements TelaNovaTeste.OnF
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
+
 
 
 
@@ -93,15 +98,7 @@ public class MainActivity extends AppCompatActivity implements TelaNovaTeste.OnF
 
     }
 
-    public void abrirMassa(View view){
-        Intent it;
-        it = new Intent(this, SplashActivity.class);
-        startActivity(it);
-    }
 
-    public void abrirPeso(View view){
-        Intent it;
-        it = new Intent(this, SplashActivity.class);
-        startActivity(it);
-    }
+
+
 }

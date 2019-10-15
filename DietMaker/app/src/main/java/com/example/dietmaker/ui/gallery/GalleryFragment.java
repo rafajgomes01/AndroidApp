@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
@@ -32,7 +34,10 @@ public class GalleryFragment extends Fragment {
             public void onChanged(@Nullable String s) {
 
             }
+
         });
+
+
 
         listView=(ListView)root.findViewById(R.id.listview);
         ArrayList<String> arrayList=new ArrayList<>();

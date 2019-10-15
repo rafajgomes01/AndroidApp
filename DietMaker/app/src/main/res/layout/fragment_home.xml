@@ -7,7 +7,7 @@
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/perdadepeso"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="27dp"
@@ -18,22 +18,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/ganhodemassa"
         app:srcCompat="@drawable/perderpeso" />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <ImageButton
+        android:id="@+id/ganhodemassa"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="178dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="26dp"
+        android:background="@drawable/peso"
         android:contentDescription="@string/app_name"
         android:onClick="abrirMassa"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/perdadepeso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/peso" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
