@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4a6a9924-31d2-488c-ac7f-152f55ac31fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/.idea/render.experimental.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/androidTest/java/com/example/dietmaker/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/dietamakericone-web.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/SplashActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/TelaNovaTeste.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/gallery/GalleryFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/gallery/GalleryViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/home/HomeFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/home/HomeViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/send/SendFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/send/SendViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/share/ShareFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/share/ShareViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/slideshow/SlideshowFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/slideshow/SlideshowViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/tools/ToolsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/java/com/example/dietmaker/ui/tools/ToolsViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/batata.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/dietmakerimagem.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/ganharmassa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/imagemdtm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/perderpeso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/peso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/shape3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable-v24/teste.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable/dietamakericone_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable/ic_accessibility.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable/ic_casinha.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable/ic_comer.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable/ic_coracu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable/ic_done_black.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable/ic_graficozinho.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/drawable/side_nav_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/activity_splash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/content_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/fragment_gallery.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/fragment_send.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/fragment_share.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/fragment_slideshow.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/fragment_teste.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/fragment_tools.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/menu/main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-anydpi-v26/dietamakericone.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-anydpi-v26/dietamakericone_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-hdpi/dietamaker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-hdpi/dietamakericone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-hdpi/dietamakericone_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-mdpi/dietamaker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-mdpi/dietamakericon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-mdpi/dietamakericone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-mdpi/dietamakericone_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xhdpi/dietamaker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xhdpi/dietamakericone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xhdpi/dietamakericone_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxhdpi/dietamaker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxhdpi/dietamakericone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxhdpi/dietamakericone_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxxhdpi/dietamaker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxxhdpi/dietamakericone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxxhdpi/dietamakericone_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/values-v21/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/values/StringHome.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/values/arrays.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/app/src/test/java/com/example/dietmaker/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DietMaker/settings.gradle" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="20" />
+    <option name="y" value="43" />
+    <option name="width" value="1400" />
+    <option name="height" value="798" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AndroidApp-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidApp-test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidApp-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidApp-test" type="462c0819:PsiDirectoryNode" />
+              <item name="DietMaker" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a6a9924-31d2-488c-ac7f-152f55ac31fb" name="Default Changelist" comment="" />
+      <created>1570017480689</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570017480689</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23608175" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Resources Explorer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="TODO" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+    </layout>
+  </component>
+</project>
