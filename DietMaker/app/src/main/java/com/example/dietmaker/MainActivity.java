@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements TelaNovaTeste.OnF
 
 
 
+
+
+
     }
 
     @Override
@@ -95,15 +98,14 @@ public class MainActivity extends AppCompatActivity implements TelaNovaTeste.OnF
 
     }
 
+
     public void abrirMassa(View view){
         Intent it;
         it = new Intent(this, GalleryFragment.class);
         startActivity(it);
     }
 
-    public void abrirPeso(View view){
-        Intent it;
-        it = new Intent(this, SplashActivity.class);
-        startActivity(it);
-    }
+
+
+
 }

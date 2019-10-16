@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.ContentView;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -20,16 +21,23 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+       /* super.onCreate(savedInstanceState);
+        setEnterTransition(R.layout.fragment_gallery);*/
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        homeViewModel.getText().observe(this, new Observer<String>() {
+        homeViewModel.getText().observe(this, new Observer<String>()
+
+        {
 
             @Override
             public void onChanged(String s) {
 
             }
+
+
         });
+
         return root;
     }
 }
