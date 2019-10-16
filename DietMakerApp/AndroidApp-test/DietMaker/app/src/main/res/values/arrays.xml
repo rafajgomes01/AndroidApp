@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exemplos" >
+        <item>exemplo 1 </item>
+        <item>exemplo 2 </item>
+        <item>exemplo 3 </item>
+    </string-array>
+</resources>

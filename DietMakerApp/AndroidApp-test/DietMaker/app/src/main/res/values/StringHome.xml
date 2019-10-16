@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_altura">Digite sua altura em centímetros</string>
+    <string name="home_idade">Digite sua idade</string>
+    <string name="home_peso">Digite seu peso</string>
+    <string name="home_frequencia">Digite quantos dias da semana\nvocê treina</string>
+    <string name="home_botao">Calcular</string>
+</resources>
