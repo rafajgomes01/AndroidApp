@@ -12,6 +12,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.dietmaker.ui.gallery.GalleryFragment;
+import com.example.dietmaker.ui.gallery.GalleryViewModel;
 import com.example.dietmaker.ui.send.SendFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements TelaNovaTeste.OnF
 
     public void abrirMassa(View view){
         Intent it;
-        it = new Intent(this, SplashActivity.class);
+        it = new Intent(this, GalleryFragment.class);
         startActivity(it);
     }
 
