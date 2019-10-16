@@ -98,6 +98,11 @@ public class MainActivity extends AppCompatActivity implements TelaNovaTeste.OnF
 
     }
 
+    public void abrirMassa(View view){
+        Intent it;
+        it = new Intent(this, GalleryFragment.class);
+        startActivity(it);
+    }
 
 
 
