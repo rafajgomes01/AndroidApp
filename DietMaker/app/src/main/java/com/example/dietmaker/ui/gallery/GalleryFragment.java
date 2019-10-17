@@ -19,7 +19,7 @@ import com.example.dietmaker.ui.gallery.GalleryViewModel;
 import java.util.ArrayList;
 
 public class GalleryFragment extends Fragment {
-    ListView listView;
+
     private GalleryViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -34,27 +34,8 @@ public class GalleryFragment extends Fragment {
             }
         });
 
-        listView=(ListView)root.findViewById(R.id.listview);
-        ArrayList<String> arrayList=new ArrayList<>();
-
-
-        arrayList.add("Desjejum");
-        arrayList.add("Lanche");
-        arrayList.add("Almoço");
-        arrayList.add("Lanche da tarde");
-        arrayList.add("Pré treino");
-        arrayList.add("Pós treino");
-        arrayList.add("Jantar");
-        arrayList.add("Ceia");
-
-
-        ArrayAdapter arrayAdapter=new ArrayAdapter(getContext(), android.R.layout.simple_expandable_list_item_1,arrayList);
-
-        listView.setAdapter((arrayAdapter));
-
         return root;
     }
 
-    public interface OnFragmentInteractionListener {
-    }
+
 }

@@ -9,43 +9,25 @@
             android:icon="@drawable/ic_casinha"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_nutri"
-            android:icon="@drawable/ic_graficozinho"
-            android:title="Fale com um nutricionista" />
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_accessibility"
+            android:title="@string/menu_gallery" />
         <item
-            android:id="@+id/nav_dicas"
+            android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_graficozinho"
-            android:title="Dicas Alimentares" />
+            android:title="@string/menu_slideshow" />
         <item
-            android:id="@+id/nav_manual"
-            android:icon="@drawable/ic_graficozinho"
-            android:title="Manual do usuário" />
-        <item
-            android:id="@+id/nav_premium"
-            android:icon="@drawable/ic_graficozinho"
-            android:title="Seja premium" />
-
-
-        <!--        <item-->
-<!--            android:id="@+id/nav_gallery"-->
-<!--            android:icon="@drawable/ic_accessibility"-->
-<!--            android:title="@string/menu_gallery" />-->
-<!--        <item-->
-<!--            android:id="@+id/nav_slideshow"-->
-<!--            android:icon="@drawable/ic_graficozinho"-->
-<!--            android:title="@string/menu_slideshow" />-->
-<!--        <item-->
-<!--            android:id="@+id/nav_tools"-->
-<!--            android:icon="@drawable/ic_comer"-->
-<!--            android:title="@string/menu_tools" />-->
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_comer"
+            android:title="@string/menu_tools" />
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/ic_coracu"
             android:title="@string/menu_share" />
-<!--        <item-->
-<!--            android:id="@+id/nav_send"-->
-<!--            android:icon="@drawable/ic_coracu"-->
-<!--            android:title="@string/menu_send" />-->
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_coracu"
+            android:title="@string/menu_send" />
 <!--        <item-->
 <!--            android:id="@+id/testeFragment"-->
 <!--            android:icon="@drawable/ic_coracu"-->
