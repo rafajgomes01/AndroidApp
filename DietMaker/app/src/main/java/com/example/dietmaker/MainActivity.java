@@ -18,12 +18,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
 import android.view.View;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFragmentInteractionListener, PerderPeso.OnFragmentInteractionListener{
-
+    private RecyclerView recyclerView;
+    private List<Filme> listaFilmes = new ArrayList<>();
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -46,6 +54,17 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        recyclerView = findViewById(R.id.recyGanho);
+
+        this.CriarFilmes();
+
+        Adapter adapter = new Adapter( listaFilmes );
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
+        recyclerView.setAdapter(adapter);
 
 
     }
@@ -84,6 +103,22 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
 
 
 
+    }
+
+    public void CriarFilmes(){
+
+        Filme filme = new Filme("batata assasina", "terror", "1997");
+        this.listaFilmes.add(filme);
+        filme = new Filme("pneu fantasma", "terror", "2003");
+        this.listaFilmes.add(filme);
+        filme = new Filme("Sharknado", "Drama", "2013");
+        this.listaFilmes.add(filme);
+        filme = new Filme("panico", "terror", "2010");
+        this.listaFilmes.add(filme);
+        filme = new Filme("Homem aranha", "Herois", "2017");
+        this.listaFilmes.add(filme);
+        filme = new Filme("senhor dos aneis", "fantasia", "2002");
+        this.listaFilmes.add(filme);
     }
 
 
