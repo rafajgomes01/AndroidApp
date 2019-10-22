@@ -10,28 +10,28 @@
         android:name="com.example.dietmaker.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
+        <fragment
+            android:id="@+id/nav_gallery"
+            android:name="com.example.dietmaker.ui.gallery.GalleryFragment"
+            android:label="@string/menu_gallery"
+            tools:layout="@layout/fragment_gallery" />
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.dietmaker.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        <fragment
+            android:id="@+id/nav_slideshow"
+            android:name="com.example.dietmaker.ui.slideshow.SlideshowFragment"
+            android:label="@string/menu_slideshow"
+            tools:layout="@layout/fragment_slideshow" />
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.dietmaker.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.example.dietmaker.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        <fragment
+            android:id="@+id/nav_tools"
+            android:name="com.example.dietmaker.ui.tools.ToolsFragment"
+            android:label="@string/menu_tools"
+            tools:layout="@layout/fragment_tools" />
 
     <fragment
         android:id="@+id/nav_share"
         android:name="com.example.dietmaker.ui.share.ShareFragment"
+
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
 
@@ -40,9 +40,9 @@
         android:name="com.example.dietmaker.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
-    <fragment
-        android:id="@+id/testeFragment"
-        android:name="com.example.dietmaker.TelaNovaTeste"
-        android:label="fragment_teste"
-        tools:layout="@layout/fragment_teste" />
+<!--    <fragment-->
+<!--        android:id="@+id/testeFragment"-->
+<!--        android:name="com.example.dietmaker.GanhodePeso"-->
+<!--        android:label="fragment_ganho__peso"-->
+<!--        tools:layout="@layout/fragment_ganho__peso" />-->
 </navigation>

@@ -28,10 +28,10 @@
             android:id="@+id/nav_send"
             android:icon="@drawable/ic_coracu"
             android:title="@string/menu_send" />
-        <item
-            android:id="@+id/testeFragment"
-            android:icon="@drawable/ic_coracu"
-            android:title="@string/menu_send" />
+<!--        <item-->
+<!--            android:id="@+id/testeFragment"-->
+<!--            android:icon="@drawable/ic_coracu"-->
+<!--            android:title="@string/menu_send" />-->
 
 
 

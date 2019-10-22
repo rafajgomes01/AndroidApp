@@ -1,5 +1,6 @@
 package com.example.dietmaker;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -19,8 +20,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements TelaNovaTeste.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFragmentInteractionListener, PerderPeso.OnFragmentInteractionListener{
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -36,8 +38,8 @@ public class MainActivity extends AppCompatActivity implements TelaNovaTeste.OnF
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send, R.id.testeFragment)
+                R.id.nav_home,  R.id.nav_gallery, R.id.nav_slideshow,
+                R.id.nav_tools, R.id.nav_share, R.id.nav_send /*R.id.testeFragment*/)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -88,5 +90,10 @@ public class MainActivity extends AppCompatActivity implements TelaNovaTeste.OnF
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+
+
+    public void abrirPeso(View view) {
     }
 }
