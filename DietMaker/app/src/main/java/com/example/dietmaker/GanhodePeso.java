@@ -5,12 +5,19 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import java.util.ArrayList;
+import android.widget.LinearLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.widget.LinearLayout.*;
 
 
 /**
@@ -30,11 +37,29 @@ public class GanhodePeso extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private RecyclerView recyclerView;
+    private List<Filme> listaFilmes = new ArrayList<>();
 
     private OnFragmentInteractionListener mListener;
 
     public GanhodePeso() {
         // Required empty public constructor
+    }
+
+    public void CriarFilmes() {
+
+        Filme filme = new Filme("batata assasina", "terror", "1997");
+        this.listaFilmes.add(filme);
+        filme = new Filme("pneu fantasma", "terror", "2003");
+        this.listaFilmes.add(filme);
+        filme = new Filme("Sharknado", "Drama", "2013");
+        this.listaFilmes.add(filme);
+        filme = new Filme("panico", "terror", "2010");
+        this.listaFilmes.add(filme);
+        filme = new Filme("Homem aranha", "Herois", "2017");
+        this.listaFilmes.add(filme);
+        filme = new Filme("senhor dos aneis", "fantasia", "2002");
+        this.listaFilmes.add(filme);
     }
 
     /**
@@ -53,22 +78,29 @@ public class GanhodePeso extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ganho__peso, container, false);
+        View meuLayout = inflater.inflate(R.layout.fragment_ganho__peso, container, false);
+        this.recyclerView = meuLayout.findViewById(R.id.recyGanho);
+        Adapter adapter = new Adapter(listaFilmes);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
+        recyclerView.setAdapter(adapter);
+        return meuLayout;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -109,4 +141,6 @@ public class GanhodePeso extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

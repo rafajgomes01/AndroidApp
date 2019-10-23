@@ -32,6 +32,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 GanhodePeso ganhodePeso = new GanhodePeso();
+                ganhodePeso.CriarFilmes();
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.nav_host_fragment, ganhodePeso);
                 transaction.commit();
