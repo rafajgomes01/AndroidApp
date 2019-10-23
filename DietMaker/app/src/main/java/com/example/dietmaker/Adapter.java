@@ -3,6 +3,7 @@ package com.example.dietmaker;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,7 +25,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
 
         View itemLista = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_lista, parent, false);
+        /*Button btn = itemLista.findViewById(jjhk);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });*/
 
         return new MyViewHolder(itemLista);
     }
