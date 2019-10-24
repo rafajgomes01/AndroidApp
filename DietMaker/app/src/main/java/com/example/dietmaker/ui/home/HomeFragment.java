@@ -21,6 +21,7 @@ public class HomeFragment extends Fragment {
     ImageButton perderpeso;
     private HomeViewModel homeViewModel;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -32,7 +33,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 GanhodePeso ganhodePeso = new GanhodePeso();
-                ganhodePeso.CriarDietas();
+                ganhodePeso.DietaGanho();
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.nav_host_fragment, ganhodePeso);
                 transaction.commit();

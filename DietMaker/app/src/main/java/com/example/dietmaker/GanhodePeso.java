@@ -37,7 +37,7 @@ public class GanhodePeso extends Fragment {
     private String mParam1;
     private String mParam2;
     private RecyclerView recyclerView;
-    private List<DietaGanho> listaDietaGanhos = new ArrayList<>();
+    private List<DietaPerderPeso> listaDietaPerderPesos = new ArrayList<>();
 
     private OnFragmentInteractionListener mListener;
 
@@ -76,7 +76,7 @@ public class GanhodePeso extends Fragment {
         // Inflate the layout for this fragment
         View meuLayout = inflater.inflate(R.layout.fragment_ganho__peso, container, false);
         this.recyclerView = meuLayout.findViewById(R.id.recyGanho);
-        AdapterGanho adapterGanho = new AdapterGanho(listaDietaGanhos);
+        AdapterGanho adapterGanho = new AdapterGanho(listaDietaPerderPesos);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -125,19 +125,19 @@ public class GanhodePeso extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    public void CriarDietas() {
+    public void DietaGanho() {
 
-        DietaGanho dietaGanho = new DietaGanho(R.drawable.cup,"Ovo Frito", "Café da manhã", "09:00");
-        this.listaDietaGanhos.add(dietaGanho);
-        dietaGanho = new DietaGanho(R.drawable.almoco,"Carne Refogada", "Almoço", "12:00");
-        this.listaDietaGanhos.add(dietaGanho);
-        dietaGanho = new DietaGanho(R.drawable.queijo,"Pão com queijo Branco", "Lanche", "15:00");
-        this.listaDietaGanhos.add(dietaGanho);
-        dietaGanho = new DietaGanho(R.drawable.ovo,"Whey protein", "Pré treino", "18:00");
-        this.listaDietaGanhos.add(dietaGanho);
-        dietaGanho = new DietaGanho(R.drawable.shake,"Ovo frito com Queijo branco", "Pós treino", "20:00");
-        this.listaDietaGanhos.add(dietaGanho);
-        dietaGanho = new DietaGanho(R.drawable.janta,"Arroz integral", "Janta", "22:00");
-        this.listaDietaGanhos.add(dietaGanho);
+        DietaPerderPeso dietaPerderPeso = new DietaPerderPeso(R.drawable.cup, "Café da manhã", "09:00");
+        this.listaDietaPerderPesos.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso(R.drawable.almoco, "Almoço", "12:00");
+        this.listaDietaPerderPesos.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso(R.drawable.queijo, "Lanche", "15:00");
+        this.listaDietaPerderPesos.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso(R.drawable.ovo, "Pré treino", "18:00");
+        this.listaDietaPerderPesos.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso(R.drawable.shake,"Pós treino", "20:00");
+        this.listaDietaPerderPesos.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso(R.drawable.janta, "Janta", "22:00");
+        this.listaDietaPerderPesos.add(dietaPerderPeso);
     }
 }

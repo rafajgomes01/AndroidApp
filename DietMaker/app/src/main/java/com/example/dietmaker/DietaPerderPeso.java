@@ -1,18 +1,16 @@
 package com.example.dietmaker;
 
-public class DietaGanho {
+public class DietaPerderPeso {
     private int foto;
-    private String dieta;
     private String tipo;
     private String horario;
 
-    public DietaGanho(){
+    public DietaPerderPeso(){
 
     }
 
-    public DietaGanho(int foto, String dieta, String tipo, String horario) {
+    public DietaPerderPeso(int foto, String tipo, String horario) {
         this.foto = foto;
-        this.dieta = dieta;
         this.tipo = tipo;
         this.horario = horario;
     }
@@ -23,14 +21,6 @@ public class DietaGanho {
 
     public void setFoto(int foto) {
         this.foto = foto;
-    }
-
-    public String getDieta() {
-        return dieta;
-    }
-
-    public void setDieta(String dieta) {
-        this.dieta = dieta;
     }
 
     public String getTipo() {
