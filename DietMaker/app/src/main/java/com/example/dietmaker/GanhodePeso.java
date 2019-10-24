@@ -125,7 +125,7 @@ public class GanhodePeso extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    public void CriarFilmes() {
+    public void CriarDietas() {
 
         DietaGanho dietaGanho = new DietaGanho(R.drawable.cup,"Ovo Frito", "Café da manhã", "09:00");
         this.listaDietaGanhos.add(dietaGanho);
