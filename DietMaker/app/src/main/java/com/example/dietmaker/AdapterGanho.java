@@ -3,7 +3,7 @@ package com.example.dietmaker;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder> {
 
-    private List<Filme> listaFilmes;
+    private List<DietaGanho> listaDietaGanhos;
 
-    public Adapter(List<Filme> lista) {
-        this.listaFilmes = lista;
+    public AdapterGanho(List<DietaGanho> lista) {
+        this.listaDietaGanhos = lista;
     }
 
     @NonNull
@@ -38,29 +38,32 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Filme filme = listaFilmes.get(position);
+        DietaGanho dietaGanho = listaDietaGanhos.get(position);
 
-        holder.titulo.setText(filme.getTituloFilme());
-        holder.ano.setText(filme.getAno());
-        holder.genero.setText(filme.getGenero());
+        holder.foto.setImageResource(dietaGanho.getFoto());
+        //holder.dieta.setText(dietaGanho.getDieta());
+        holder.horario.setText(dietaGanho.getHorario());
+        holder.tipo.setText(dietaGanho.getTipo());
     }
 
     @Override
     public int getItemCount() {
-        return listaFilmes.size();
+        return listaDietaGanhos.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView titulo;
-        TextView ano;
-        TextView genero;
+        ImageView foto;
+        //TextView dieta;
+        TextView horario;
+        TextView tipo;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            titulo = itemView.findViewById(R.id.txtTitulo);
-            ano = itemView.findViewById(R.id.txtAno);
-            genero = itemView.findViewById(R.id.txtGenero);
+            foto = itemView.findViewById(R.id.imgFoto);
+            //dieta = itemView.findViewById(R.id.txtDieta);
+            horario = itemView.findViewById(R.id.txtHorario);
+            tipo = itemView.findViewById(R.id.txtTipo);
         }
     }
 }

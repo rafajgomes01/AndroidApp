@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,28 +37,12 @@ public class GanhodePeso extends Fragment {
     private String mParam1;
     private String mParam2;
     private RecyclerView recyclerView;
-    private List<Filme> listaFilmes = new ArrayList<>();
+    private List<DietaGanho> listaDietaGanhos = new ArrayList<>();
 
     private OnFragmentInteractionListener mListener;
 
     public GanhodePeso() {
         // Required empty public constructor
-    }
-
-    public void CriarFilmes() {
-
-        Filme filme = new Filme("batata assasina", "terror", "1997");
-        this.listaFilmes.add(filme);
-        filme = new Filme("pneu fantasma", "terror", "2003");
-        this.listaFilmes.add(filme);
-        filme = new Filme("Sharknado", "Drama", "2013");
-        this.listaFilmes.add(filme);
-        filme = new Filme("panico", "terror", "2010");
-        this.listaFilmes.add(filme);
-        filme = new Filme("Homem aranha", "Herois", "2017");
-        this.listaFilmes.add(filme);
-        filme = new Filme("senhor dos aneis", "fantasia", "2002");
-        this.listaFilmes.add(filme);
     }
 
     /**
@@ -93,13 +76,13 @@ public class GanhodePeso extends Fragment {
         // Inflate the layout for this fragment
         View meuLayout = inflater.inflate(R.layout.fragment_ganho__peso, container, false);
         this.recyclerView = meuLayout.findViewById(R.id.recyGanho);
-        Adapter adapter = new Adapter(listaFilmes);
+        AdapterGanho adapterGanho = new AdapterGanho(listaDietaGanhos);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapterGanho);
         return meuLayout;
     }
 
@@ -142,5 +125,19 @@ public class GanhodePeso extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+    public void CriarFilmes() {
 
+        DietaGanho dietaGanho = new DietaGanho(R.drawable.cup,"Ovo Frito", "Café da manhã", "09:00");
+        this.listaDietaGanhos.add(dietaGanho);
+        dietaGanho = new DietaGanho(R.drawable.almoco,"Carne Refogada", "Almoço", "12:00");
+        this.listaDietaGanhos.add(dietaGanho);
+        dietaGanho = new DietaGanho(R.drawable.queijo,"Pão com queijo Branco", "Lanche", "15:00");
+        this.listaDietaGanhos.add(dietaGanho);
+        dietaGanho = new DietaGanho(R.drawable.ovo,"Whey protein", "Pré treino", "18:00");
+        this.listaDietaGanhos.add(dietaGanho);
+        dietaGanho = new DietaGanho(R.drawable.shake,"Ovo frito com Queijo branco", "Pós treino", "20:00");
+        this.listaDietaGanhos.add(dietaGanho);
+        dietaGanho = new DietaGanho(R.drawable.janta,"Arroz integral", "Janta", "22:00");
+        this.listaDietaGanhos.add(dietaGanho);
+    }
 }
