@@ -91,7 +91,7 @@ public class GanhodePeso extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
         recyclerView.setAdapter(adapterGanho);
-        recyclerView.addOnItemTouchListener(
+        /*recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(
                         getContext(),
                         recyclerView,
@@ -113,7 +113,7 @@ public class GanhodePeso extends Fragment {
                             }
                         }
                 )
-        );
+        );*/
 
         return meuLayout;
     }
@@ -159,17 +159,17 @@ public class GanhodePeso extends Fragment {
 
     public void DietaGanho() {
 
-        DietaGanharPeso dietaGanharPeso = new DietaGanharPeso(R.drawable.cup, "Café da manhã", "09:00");
+        DietaGanharPeso dietaGanharPeso = new DietaGanharPeso(/*R.drawable.cup,*/ "Café da manhã", "09:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(R.drawable.almoco, "Almoço", "12:00");
+        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.almoco,*/ "Almoço", "12:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(R.drawable.queijo, "Lanche", "15:00");
+        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.queijo,*/ "Lanche", "dsuhaiduhdlsajdlkjsadlksajdlksajdklsajdklsajdklasjfklasjflksajdklsahfklashfkls");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(R.drawable.ovo, "Pré treino", "18:00");
+        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.ovo,*/ "Pré treino", "18:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(R.drawable.shake,"Pós treino", "20:00");
+        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.shake,*/"Pós treino", "20:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(R.drawable.janta, "Janta", "22:00");
+        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.janta,*/ "Janta", "22:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
     }
 }
