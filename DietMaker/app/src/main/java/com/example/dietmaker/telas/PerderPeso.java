@@ -5,12 +5,22 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.dietmaker.R;
+import com.example.dietmaker.adapter.AdapterPerder;
+import com.example.dietmaker.classes.DietaPerderPeso;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.widget.LinearLayout.VERTICAL;
 
 
 /**
@@ -31,6 +41,9 @@ public class PerderPeso extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private RecyclerView recyclerView;
+    private List<DietaPerderPeso> listaDietaPerderPeso = new ArrayList<>();
 
     private OnFragmentInteractionListener mListener;
 
@@ -59,17 +72,22 @@ public class PerderPeso extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_perder_peso, container, false);
+        View meuLayout = inflater.inflate(R.layout.fragment_ganho__peso, container, false);        this.recyclerView = meuLayout.findViewById(R.id.recyGanho);
+        AdapterPerder adapterPerder = new AdapterPerder(listaDietaPerderPeso);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
+        recyclerView.setAdapter(adapterPerder);
+
+        return meuLayout;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -109,6 +127,22 @@ public class PerderPeso extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void DietaPerder() {
+
+        DietaPerderPeso dietaPerderPeso = new DietaPerderPeso("Perder Peso","Arroz integral","asadasdasdasdas","20:10");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Almoço","alguma coisa" ,"asdsdfsdfsdaf","12:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Lanche", "Lorem","asnmdosdfnondfsndfisdnfiosndfnsdafo","17:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Pré treino","sla","sadfsdfsdafsdaf","18:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Pós treino","sdfsd","asdfsadfsdfsdaf", "20:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Janta","sdfsadfa","sdfsadfsadfsadfasdf", "22:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
     }
 
 }

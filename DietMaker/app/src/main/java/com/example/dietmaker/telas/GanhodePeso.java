@@ -159,17 +159,17 @@ public class GanhodePeso extends Fragment {
 
     public void DietaGanho() {
 
-        DietaGanharPeso dietaGanharPeso = new DietaGanharPeso("Café da manhã", "09:00");
+        DietaGanharPeso dietaGanharPeso = new DietaGanharPeso("Café da manhã","Arroz integral","asadasdasdasdas","20:10");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso("Almoço", "12:00");
+        dietaGanharPeso = new DietaGanharPeso("Almoço","alguma coisa" ,"asdsdfsdfsdaf","12:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso("Lanche", "dsuhaiduhdlsajdlkjsadlksajdlksajdklsajdklsajdklasjfklasjflksajdklsahfklashfkls");
+        dietaGanharPeso = new DietaGanharPeso("Lanche", "Lorem","asnmdosdfnondfsndfisdnfiosndfnsdafo","17:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso("Pré treino", "18:00");
+        dietaGanharPeso = new DietaGanharPeso("Pré treino","sla","sadfsdfsdafsdaf","18:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso("Pós treino", "20:00");
+        dietaGanharPeso = new DietaGanharPeso("Pós treino","sdfsd","asdfsadfsdfsdaf", "20:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso("Janta", "22:00");
+        dietaGanharPeso = new DietaGanharPeso("Janta","sdfsadfa","sdfsadfsadfsadfasdf", "22:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
     }
 }

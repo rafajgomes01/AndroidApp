@@ -5,6 +5,8 @@ public class DietaGanharPeso {
 
     private String titulo;
     private String horario;
+    private String subtitulo;
+    private String conteudo;
     private boolean expanded;
 
     public boolean isExpanded() {
@@ -19,10 +21,12 @@ public class DietaGanharPeso {
 
     }
 
-    public DietaGanharPeso(/*int foto,*/ String titulo, String horario) {
-     //   this.foto = foto;
+    public DietaGanharPeso(/*int foto,*/ String titulo, String subtitulo, String conteudo, String horario) {
+        //this.foto = foto;
         this.titulo = titulo;
         this.horario = horario;
+        this.subtitulo = subtitulo;
+        this.conteudo = conteudo;
         this.expanded = false;
     }
 
@@ -42,11 +46,27 @@ public class DietaGanharPeso {
         this.titulo = titulo;
     }
 
+    public String getSubtitulo() {
+        return subtitulo;
+    }
+
+    public void setSubtitulo(String subtitulo) {
+        this.subtitulo = subtitulo;
+    }
+
     public String getHorario() {
         return horario;
     }
 
     public void setHorario(String horario) {
         this.horario = horario;
+    }
+
+    public void setConteudo(String conteudo) {
+        this.conteudo = conteudo;
+    }
+
+    public String getConteudo() {
+        return conteudo;
     }
 }

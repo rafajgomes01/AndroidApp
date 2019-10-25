@@ -3,10 +3,10 @@ package com.example.dietmaker.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dietmaker.classes.DietaPerderPeso;
@@ -43,9 +43,14 @@ public class AdapterPerder extends RecyclerView.Adapter<AdapterPerder.MyViewHold
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         DietaPerderPeso dietaPerderPeso = listaDietaPerder.get(position);
 
-        //holder.foto.setImageResource(dietaPerderPeso.getFoto());
+        //holder.foto.setImageResource(dietaGanharPeso.getFoto());
         holder.horario.setText(dietaPerderPeso.getHorario());
-        holder.tipo.setText(dietaPerderPeso.getTipo());
+        holder.titulo.setText(dietaPerderPeso.getTitulo());
+        holder.subtitulo.setText(dietaPerderPeso.getSubtitulo());
+        holder.conteudo.setText((dietaPerderPeso.getConteudo()));
+
+        boolean isExpanded = listaDietaPerder.get(position).isExpanded();
+        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
     }
 
     @Override
@@ -56,14 +61,28 @@ public class AdapterPerder extends RecyclerView.Adapter<AdapterPerder.MyViewHold
     public class MyViewHolder extends RecyclerView.ViewHolder{
         //ImageView foto;
         TextView horario;
-        TextView tipo;
+        TextView titulo;
+        TextView subtitulo;
+        TextView conteudo;
+        ConstraintLayout expandableLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            expandableLayout = itemView.findViewById(R.id.expandableLayout);
             //foto = itemView.findViewById(R.id.imgFoto);
-            horario = itemView.findViewById(R.id.txtTipo);
-            tipo = itemView.findViewById(R.id.txtTipo);
+            horario = itemView.findViewById(R.id.txtHorario);
+            titulo = itemView.findViewById(R.id.txtTitulo);
+            subtitulo = itemView.findViewById(R.id.txtSub);
+            conteudo = itemView.findViewById(R.id.txtContent);
+
+            titulo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DietaPerderPeso dietaPerderPeso = listaDietaPerder.get(getAdapterPosition());
+                    dietaPerderPeso.setExpanded(!dietaPerderPeso.isExpanded());
+                    notifyItemChanged(getAdapterPosition());
+                }
+            });
         }
     }
 }
