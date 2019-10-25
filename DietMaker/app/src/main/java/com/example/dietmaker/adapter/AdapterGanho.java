@@ -7,10 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dietmaker.classes.DietaGanharPeso;
-import com.example.dietmaker.classes.DietaPerderPeso;
 import com.example.dietmaker.R;
 
 import java.util.List;
@@ -44,9 +44,13 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         DietaGanharPeso dietaGanharPeso = listaDietaGanharPeso.get(position);
 
-       // holder.foto.setImageResource(dietaGanharPeso.getFoto());
+        //holder.foto.setImageResource(dietaGanharPeso.getFoto());
         holder.horario.setText(dietaGanharPeso.getHorario());
         holder.tipo.setText(dietaGanharPeso.getTipo());
+
+        boolean isExpanded = listaDietaGanharPeso.get(position).isExpanded();
+        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
+
     }
 
     @Override
@@ -55,16 +59,26 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-       // ImageView foto;
+        //ImageView foto;
         TextView horario;
         TextView tipo;
+        ConstraintLayout expandableLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
-           // foto = itemView.findViewById(R.id.imgFoto);
+            expandableLayout = itemView.findViewById(R.id.expandableLayout);
+            //foto = itemView.findViewById(R.id.imgFoto);
             horario = itemView.findViewById(R.id.txtHorario);
             tipo = itemView.findViewById(R.id.txtTipo);
+
+            tipo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DietaGanharPeso dietaGanharPeso = listaDietaGanharPeso.get(getAdapterPosition());
+                    dietaGanharPeso.setExpanded(!dietaGanharPeso.isExpanded());
+                    notifyItemChanged(getAdapterPosition());
+                }
+            });
         }
     }
 }
