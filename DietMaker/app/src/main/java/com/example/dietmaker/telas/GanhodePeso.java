@@ -99,7 +99,7 @@ public class GanhodePeso extends Fragment {
                             @Override
                             public void onItemClick(View view, int position) {
                                 DietaGanharPeso ganho = listaDietaGanharPeso.get(position);
-                                Toast.makeText(getContext(), "item clicado " + ganho.getTipo() , Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "item clicado " + ganho.getTitulo() , Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -159,17 +159,17 @@ public class GanhodePeso extends Fragment {
 
     public void DietaGanho() {
 
-        DietaGanharPeso dietaGanharPeso = new DietaGanharPeso(/*R.drawable.cup,*/ "Café da manhã", "09:00");
+        DietaGanharPeso dietaGanharPeso = new DietaGanharPeso("Café da manhã", "09:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.almoco,*/ "Almoço", "12:00");
+        dietaGanharPeso = new DietaGanharPeso("Almoço", "12:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.queijo,*/ "Lanche", "dsuhaiduhdlsajdlkjsadlksajdlksajdklsajdklsajdklasjfklasjflksajdklsahfklashfkls");
+        dietaGanharPeso = new DietaGanharPeso("Lanche", "dsuhaiduhdlsajdlkjsadlksajdlksajdklsajdklsajdklasjfklasjflksajdklsahfklashfkls");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.ovo,*/ "Pré treino", "18:00");
+        dietaGanharPeso = new DietaGanharPeso("Pré treino", "18:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.shake,*/"Pós treino", "20:00");
+        dietaGanharPeso = new DietaGanharPeso("Pós treino", "20:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso(/*R.drawable.janta,*/ "Janta", "22:00");
+        dietaGanharPeso = new DietaGanharPeso("Janta", "22:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
     }
 }

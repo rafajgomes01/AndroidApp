@@ -3,7 +3,6 @@ package com.example.dietmaker.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -46,7 +45,7 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
 
         //holder.foto.setImageResource(dietaGanharPeso.getFoto());
         holder.horario.setText(dietaGanharPeso.getHorario());
-        holder.tipo.setText(dietaGanharPeso.getTipo());
+        holder.tipo.setText(dietaGanharPeso.getTitulo());
 
         boolean isExpanded = listaDietaGanharPeso.get(position).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);

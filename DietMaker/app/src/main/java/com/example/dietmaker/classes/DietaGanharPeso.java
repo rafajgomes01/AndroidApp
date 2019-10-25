@@ -1,8 +1,9 @@
 package com.example.dietmaker.classes;
 
 public class DietaGanharPeso {
-   // private int foto;
-    private String tipo;
+    //private int foto;
+
+    private String titulo;
     private String horario;
     private boolean expanded;
 
@@ -18,9 +19,9 @@ public class DietaGanharPeso {
 
     }
 
-    public DietaGanharPeso(/*int foto,*/ String tipo, String horario) {
+    public DietaGanharPeso(/*int foto,*/ String titulo, String horario) {
      //   this.foto = foto;
-        this.tipo = tipo;
+        this.titulo = titulo;
         this.horario = horario;
         this.expanded = false;
     }
@@ -33,12 +34,12 @@ public class DietaGanharPeso {
         this.foto = foto;
     }*/
 
-    public String getTipo() {
-        return tipo;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getHorario() {
