@@ -12,14 +12,15 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.dietmaker.PerderPeso;
+import com.example.dietmaker.telas.PerderPeso;
 import com.example.dietmaker.R;
-import com.example.dietmaker.GanhodePeso;
+import com.example.dietmaker.telas.GanhodePeso;
 
 public class HomeFragment extends Fragment {
     ImageButton ganho;
     ImageButton perderpeso;
     private HomeViewModel homeViewModel;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 GanhodePeso ganhodePeso = new GanhodePeso();
+                ganhodePeso.DietaGanho();
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.nav_host_fragment, ganhodePeso);
                 transaction.commit();

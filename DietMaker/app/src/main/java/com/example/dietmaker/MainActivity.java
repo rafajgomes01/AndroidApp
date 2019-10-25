@@ -1,6 +1,5 @@
 package com.example.dietmaker;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -12,6 +11,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.dietmaker.telas.GanhodePeso;
+import com.example.dietmaker.telas.PerderPeso;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
 
 
 
@@ -85,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
 
 
     }
+
+
 
 
     @Override

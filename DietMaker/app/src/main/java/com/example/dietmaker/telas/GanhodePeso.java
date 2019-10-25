@@ -1,16 +1,30 @@
-package com.example.dietmaker;
+package com.example.dietmaker.telas;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import java.util.ArrayList;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
+import com.example.dietmaker.classes.DietaGanharPeso;
+import com.example.dietmaker.classes.DietaPerderPeso;
+import com.example.dietmaker.R;
+import com.example.dietmaker.classes.RecyclerItemClickListener;
+import com.example.dietmaker.adapter.AdapterGanho;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.widget.LinearLayout.*;
 
 
 /**
@@ -30,6 +44,8 @@ public class GanhodePeso extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private RecyclerView recyclerView;
+    private List<DietaGanharPeso> listaDietaGanharPeso = new ArrayList<>();
 
     private OnFragmentInteractionListener mListener;
 
@@ -53,22 +69,53 @@ public class GanhodePeso extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ganho__peso, container, false);
+        View meuLayout = inflater.inflate(R.layout.fragment_ganho__peso, container, false);
+        this.recyclerView = meuLayout.findViewById(R.id.recyGanho);
+        AdapterGanho adapterGanho = new AdapterGanho(listaDietaGanharPeso);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
+        recyclerView.setAdapter(adapterGanho);
+        recyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(
+                        getContext(),
+                        recyclerView,
+                        new RecyclerItemClickListener.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(View view, int position) {
+                                DietaGanharPeso ganho = listaDietaGanharPeso.get(position);
+                                Toast.makeText(getContext(), "item clicado " + ganho.getTipo() , Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onLongItemClick(View view, int position) {
+                                Toast.makeText(getContext(), "item segurado", Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            }
+                        }
+                )
+        );
+
+        return meuLayout;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -108,5 +155,21 @@ public class GanhodePeso extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void DietaGanho() {
+
+        DietaGanharPeso dietaGanharPeso = new DietaGanharPeso(R.drawable.cup, "Café da manhã", "09:00");
+        this.listaDietaGanharPeso.add(dietaGanharPeso);
+        dietaGanharPeso = new DietaGanharPeso(R.drawable.almoco, "Almoço", "12:00");
+        this.listaDietaGanharPeso.add(dietaGanharPeso);
+        dietaGanharPeso = new DietaGanharPeso(R.drawable.queijo, "Lanche", "15:00");
+        this.listaDietaGanharPeso.add(dietaGanharPeso);
+        dietaGanharPeso = new DietaGanharPeso(R.drawable.ovo, "Pré treino", "18:00");
+        this.listaDietaGanharPeso.add(dietaGanharPeso);
+        dietaGanharPeso = new DietaGanharPeso(R.drawable.shake,"Pós treino", "20:00");
+        this.listaDietaGanharPeso.add(dietaGanharPeso);
+        dietaGanharPeso = new DietaGanharPeso(R.drawable.janta, "Janta", "22:00");
+        this.listaDietaGanharPeso.add(dietaGanharPeso);
     }
 }
