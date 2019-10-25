@@ -98,9 +98,8 @@ public class GanhodePeso extends Fragment {
                         new RecyclerItemClickListener.OnItemClickListener() {
                             @Override
                             public void onItemClick(View view, int position) {
-                                DietaGanharPeso ganho = new listaDietaGanharPeso.get(position);
-                                ganho.getTipo();
-                                Toast.makeText(getContext(), "item clicado", Toast.LENGTH_SHORT).show();
+                                DietaGanharPeso ganho = listaDietaGanharPeso.get(position);
+                                Toast.makeText(getContext(), "item clicado " + ganho.getTipo() , Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
