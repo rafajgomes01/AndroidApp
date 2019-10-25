@@ -43,7 +43,7 @@ public class AdapterPerder extends RecyclerView.Adapter<AdapterPerder.MyViewHold
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         DietaPerderPeso dietaPerderPeso = listaDietaPerder.get(position);
 
-        holder.foto.setImageResource(dietaPerderPeso.getFoto());
+       // holder.foto.setImageResource(dietaPerderPeso.getFoto());
         holder.horario.setText(dietaPerderPeso.getHorario());
         holder.tipo.setText(dietaPerderPeso.getTipo());
     }
@@ -54,14 +54,14 @@ public class AdapterPerder extends RecyclerView.Adapter<AdapterPerder.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        ImageView foto;
+       // ImageView foto;
         TextView horario;
         TextView tipo;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            foto = itemView.findViewById(R.id.imgFoto);
+           // foto = itemView.findViewById(R.id.imgFoto);
             horario = itemView.findViewById(R.id.txtHorario);
             tipo = itemView.findViewById(R.id.txtTipo);
         }

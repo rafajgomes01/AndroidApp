@@ -44,7 +44,7 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         DietaGanharPeso dietaGanharPeso = listaDietaGanharPeso.get(position);
 
-        holder.foto.setImageResource(dietaGanharPeso.getFoto());
+       // holder.foto.setImageResource(dietaGanharPeso.getFoto());
         holder.horario.setText(dietaGanharPeso.getHorario());
         holder.tipo.setText(dietaGanharPeso.getTipo());
     }
@@ -55,14 +55,14 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        ImageView foto;
+       // ImageView foto;
         TextView horario;
         TextView tipo;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            foto = itemView.findViewById(R.id.imgFoto);
+           // foto = itemView.findViewById(R.id.imgFoto);
             horario = itemView.findViewById(R.id.txtHorario);
             tipo = itemView.findViewById(R.id.txtTipo);
         }
