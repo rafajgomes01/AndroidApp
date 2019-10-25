@@ -12,9 +12,9 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.dietmaker.PerderPeso;
+import com.example.dietmaker.telas.PerderPeso;
 import com.example.dietmaker.R;
-import com.example.dietmaker.GanhodePeso;
+import com.example.dietmaker.telas.GanhodePeso;
 
 public class HomeFragment extends Fragment {
     ImageButton ganho;

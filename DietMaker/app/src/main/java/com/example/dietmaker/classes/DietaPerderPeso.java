@@ -1,15 +1,15 @@
-package com.example.dietmaker;
+package com.example.dietmaker.classes;
 
-public class DietaPerder {
+public class DietaPerderPeso {
     private int foto;
     private String tipo;
     private String horario;
 
-    public DietaPerder(){
+    public DietaPerderPeso(){
 
     }
 
-    public DietaPerder(int foto, String tipo, String horario) {
+    public DietaPerderPeso(int foto, String tipo, String horario) {
         this.foto = foto;
         this.tipo = tipo;
         this.horario = horario;

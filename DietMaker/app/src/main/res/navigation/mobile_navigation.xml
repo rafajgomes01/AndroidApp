@@ -42,7 +42,7 @@
         tools:layout="@layout/fragment_send" />
 <!--    <fragment-->
 <!--        android:id="@+id/testeFragment"-->
-<!--        android:name="com.example.dietmaker.GanhodePeso"-->
+<!--        android:name="com.example.dietmaker.telas.GanhodePeso"-->
 <!--        android:label="fragment_ganho__peso"-->
 <!--        tools:layout="@layout/fragment_ganho__peso" />-->
 </navigation>

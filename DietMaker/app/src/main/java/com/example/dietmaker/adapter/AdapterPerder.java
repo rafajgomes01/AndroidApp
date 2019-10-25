@@ -1,4 +1,4 @@
-package com.example.dietmaker;
+package com.example.dietmaker.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,14 +9,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.dietmaker.classes.DietaPerderPeso;
+import com.example.dietmaker.R;
+
 import java.util.List;
 
-public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder> {
+public class AdapterPerder extends RecyclerView.Adapter<AdapterPerder.MyViewHolder> {
 
-    private List<DietaPerderPeso> listaDietaPerderPesos;
+    private List<DietaPerderPeso> listaDietaPerder;
 
-    public AdapterGanho(List<DietaPerderPeso> lista) {
-        this.listaDietaPerderPesos = lista;
+    public AdapterPerder(List<DietaPerderPeso> lista) {
+        this.listaDietaPerder = lista;
     }
 
     @NonNull
@@ -38,7 +41,7 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        DietaPerderPeso dietaPerderPeso = listaDietaPerderPesos.get(position);
+        DietaPerderPeso dietaPerderPeso = listaDietaPerder.get(position);
 
         holder.foto.setImageResource(dietaPerderPeso.getFoto());
         holder.horario.setText(dietaPerderPeso.getHorario());
@@ -47,7 +50,7 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
 
     @Override
     public int getItemCount() {
-        return listaDietaPerderPesos.size();
+        return listaDietaPerder.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
