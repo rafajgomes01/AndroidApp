@@ -4,6 +4,15 @@ public class DietaGanharPeso {
     private int foto;
     private String tipo;
     private String horario;
+    private boolean expanded;
+
+    public boolean isExpanded() {
+        return expanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        this.expanded = expanded;
+    }
 
     public DietaGanharPeso(){
 
@@ -13,6 +22,7 @@ public class DietaGanharPeso {
         this.foto = foto;
         this.tipo = tipo;
         this.horario = horario;
+        this.expanded = false;
     }
 
     public int getFoto() {

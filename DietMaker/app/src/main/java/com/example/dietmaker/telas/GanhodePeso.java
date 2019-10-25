@@ -91,7 +91,7 @@ public class GanhodePeso extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
         recyclerView.setAdapter(adapterGanho);
-        recyclerView.addOnItemTouchListener(
+        /*recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(
                         getContext(),
                         recyclerView,
@@ -113,7 +113,7 @@ public class GanhodePeso extends Fragment {
                             }
                         }
                 )
-        );
+        );*/
 
         return meuLayout;
     }
