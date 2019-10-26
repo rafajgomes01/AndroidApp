@@ -1,34 +1,57 @@
 package com.example.dietmaker.classes;
 
 public class DietaGanharPeso {
-    private int foto;
-    private String tipo;
+    //private int foto;
+
+    private String titulo;
     private String horario;
+    private String subtitulo;
+    private String conteudo;
+    private boolean expanded;
+
+    public boolean isExpanded() {
+        return expanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        this.expanded = expanded;
+    }
 
     public DietaGanharPeso(){
 
     }
 
-    public DietaGanharPeso(int foto, String tipo, String horario) {
-        this.foto = foto;
-        this.tipo = tipo;
+    public DietaGanharPeso(/*int foto,*/ String titulo, String subtitulo, String conteudo, String horario) {
+        //this.foto = foto;
+        this.titulo = titulo;
         this.horario = horario;
+        this.subtitulo = subtitulo;
+        this.conteudo = conteudo;
+        this.expanded = false;
     }
 
-    public int getFoto() {
+    /*public int getFoto() {
         return foto;
     }
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }*/
+
+    public String getTitulo() {
+        return titulo;
     }
 
-    public String getTipo() {
-        return tipo;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public String getSubtitulo() {
+        return subtitulo;
+    }
+
+    public void setSubtitulo(String subtitulo) {
+        this.subtitulo = subtitulo;
     }
 
     public String getHorario() {
@@ -37,5 +60,13 @@ public class DietaGanharPeso {
 
     public void setHorario(String horario) {
         this.horario = horario;
+    }
+
+    public void setConteudo(String conteudo) {
+        this.conteudo = conteudo;
+    }
+
+    public String getConteudo() {
+        return conteudo;
     }
 }
