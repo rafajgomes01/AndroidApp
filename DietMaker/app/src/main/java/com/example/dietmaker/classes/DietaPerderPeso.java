@@ -3,7 +3,7 @@ package com.example.dietmaker.classes;
 public class DietaPerderPeso {
     private String titulo;
     private String horario;
-    private String subtitulo;
+   // private String subtitulo;
     private String conteudo;
     private boolean expanded;
 
@@ -24,7 +24,7 @@ public class DietaPerderPeso {
         //this.foto = foto;
         this.titulo = titulo;
         this.horario = horario;
-        this.subtitulo = subtitulo;
+       // this.subtitulo = subtitulo;
         this.conteudo = conteudo;
         this.expanded = false;
     }
@@ -45,13 +45,13 @@ public class DietaPerderPeso {
         this.titulo = titulo;
     }
 
-    public String getSubtitulo() {
+   /* public String getSubtitulo() {
         return subtitulo;
     }
 
     public void setSubtitulo(String subtitulo) {
         this.subtitulo = subtitulo;
-    }
+    }*/
 
     public String getHorario() {
         return horario;

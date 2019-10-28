@@ -5,7 +5,7 @@ public class DietaGanharPeso {
 
     private String titulo;
     private String horario;
-    private String subtitulo;
+    //private String subtitulo;
     private String conteudo;
     private boolean expanded;
 
@@ -25,7 +25,7 @@ public class DietaGanharPeso {
         //this.foto = foto;
         this.titulo = titulo;
         this.horario = horario;
-        this.subtitulo = subtitulo;
+        //this.subtitulo = subtitulo;
         this.conteudo = conteudo;
         this.expanded = false;
     }
@@ -46,13 +46,13 @@ public class DietaGanharPeso {
         this.titulo = titulo;
     }
 
-    public String getSubtitulo() {
-        return subtitulo;
-    }
+   // public String getSubtitulo() {
+       // return subtitulo;
+   // }
 
-    public void setSubtitulo(String subtitulo) {
+    /*public void setSubtitulo(String subtitulo) {
         this.subtitulo = subtitulo;
-    }
+    }*/
 
     public String getHorario() {
         return horario;

@@ -84,7 +84,6 @@
         android:layout_height="51dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/botao_arredondado"
-        android:shadowRadius="50dp"
         android:text="Subescrever"
         android:textColor="#FFFFFF"
         android:textSize="21sp"

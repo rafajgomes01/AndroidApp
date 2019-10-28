@@ -131,17 +131,28 @@ public class PerderPeso extends Fragment {
 
     public void DietaPerder() {
 
-        DietaPerderPeso dietaPerderPeso = new DietaPerderPeso("Perder Peso","Arroz integral","asadasdasdasdas","20:10");
+        DietaPerderPeso dietaPerderPeso = new DietaPerderPeso("Perder Peso","Arroz integral","Suco de laranja (1 Copo Pequeno)\t " +
+                "\nPão integral (Fatia: 1)\t " +
+                "\nRequeijão light (2 Ponta De Faca)\t" +
+                " \nFruta (não especificada) (Porcao: 1)\t","07:00");
         this.listaDietaPerderPeso.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Almoço","alguma coisa" ,"asdsdfsdfsdaf","12:00");
+        dietaPerderPeso = new DietaPerderPeso("Lanche da manhã","alguma coisa" ,"Castanha do Pará sem sal (Unidade (4g): 1)\t \nUva passa (Colher de sopa cheia (18g): 1)\t","10:00");
         this.listaDietaPerderPeso.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Lanche", "Lorem","asnmdosdfnondfsndfisdnfiosndfnsdafo","17:00");
+        dietaPerderPeso = new DietaPerderPeso("Almoço", "Lorem","Salada, de legumes, cozida no vapor (Colher de Sopa: 3)\t " +
+                "\nPeito de galinha ou frango Cozido(a) (File: 1)\t" +
+                " \nEspaguete, cozido, enriquecido, com sal (2 Pegador)\t " +
+                "\nMolho de tomate (3 Colher de sopa (20g))\t" +
+                " \nChocolate, meio amargo (Pedaço: 1)\t","12:00");
         this.listaDietaPerderPeso.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Pré treino","sla","sadfsdfsdafsdaf","18:00");
+        dietaPerderPeso = new DietaPerderPeso("Lanche da tarde","sla","Suco de abacaxi (Copo Americano: 1)\t \nPão de queijo (Unidade Pequena: 2)\t","16:00");
         this.listaDietaPerderPeso.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Pós treino","sdfsd","asdfsadfsdfsdaf", "20:00");
+        dietaPerderPeso = new DietaPerderPeso("Jantar","sdfsd","Blanquet de peru (Fatia: 1)\t \nQueijo prato (Fatia: 1)\t \nRequeijão light (Ponta De Faca: 3)\t \nTomate (3 Fatia média (15g))\t \nAlface, americana, crua (Folha De Hortaliça: 3)\t \nPão integral (2 Fatia)\t \nSuco de uva integral (1 Copo pequeno (165ml))\t \nObs: Alface e tomate à vontade\n" +
+                "\n", "20:00");
         this.listaDietaPerderPeso.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Janta","sdfsadfa","sdfsadfsadfsadfasdf", "22:00");
+        dietaPerderPeso = new DietaPerderPeso("Pós-treino","sdfsadfa","Banana, nanica, crua (Unidade: 1)\t \nObs: 1 banana\n" +
+                "\n", "21:30");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Ceia","sdfsadfa","Iogurte desnatado (1 Pote)\t \nAveia em flocos (1 Colher De Sopa)\t", "23:00");
         this.listaDietaPerderPeso.add(dietaPerderPeso);
     }
 

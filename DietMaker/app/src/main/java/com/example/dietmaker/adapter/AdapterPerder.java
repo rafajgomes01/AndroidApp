@@ -46,7 +46,7 @@ public class AdapterPerder extends RecyclerView.Adapter<AdapterPerder.MyViewHold
         //holder.foto.setImageResource(dietaGanharPeso.getFoto());
         holder.horario.setText(dietaPerderPeso.getHorario());
         holder.titulo.setText(dietaPerderPeso.getTitulo());
-        holder.subtitulo.setText(dietaPerderPeso.getSubtitulo());
+        //holder.subtitulo.setText(dietaPerderPeso.getSubtitulo());
         holder.conteudo.setText((dietaPerderPeso.getConteudo()));
 
         boolean isExpanded = listaDietaPerder.get(position).isExpanded();
@@ -62,7 +62,7 @@ public class AdapterPerder extends RecyclerView.Adapter<AdapterPerder.MyViewHold
         //ImageView foto;
         TextView horario;
         TextView titulo;
-        TextView subtitulo;
+        //TextView subtitulo;
         TextView conteudo;
         ConstraintLayout expandableLayout;
 
@@ -72,7 +72,7 @@ public class AdapterPerder extends RecyclerView.Adapter<AdapterPerder.MyViewHold
             //foto = itemView.findViewById(R.id.imgFoto);
             horario = itemView.findViewById(R.id.txtHorario);
             titulo = itemView.findViewById(R.id.txtTitulo);
-            subtitulo = itemView.findViewById(R.id.txtSub);
+            //subtitulo = itemView.findViewById(R.id.txtSub);
             conteudo = itemView.findViewById(R.id.txtContent);
 
             titulo.setOnClickListener(new View.OnClickListener() {
