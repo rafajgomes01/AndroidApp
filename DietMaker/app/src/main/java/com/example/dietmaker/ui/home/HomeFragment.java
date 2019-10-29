@@ -40,12 +40,15 @@ public class HomeFragment extends Fragment {
             }
             });
         this.perderpeso.setOnClickListener(new View.OnClickListener() {
-
+            @Override
             public void onClick(View view) {
                 PerderPeso perderPeso = new PerderPeso();
+                perderPeso.DietaPerder();
                 FragmentTransaction mudartela = getActivity().getSupportFragmentManager().beginTransaction();
                 mudartela.replace(R.id.nav_host_fragment, perderPeso);
                 mudartela.commit();
+
+
             }
 
         });

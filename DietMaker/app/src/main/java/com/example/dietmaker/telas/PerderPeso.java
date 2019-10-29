@@ -4,13 +4,27 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toolbar;
 
 import com.example.dietmaker.R;
+import com.example.dietmaker.adapter.AdapterPerder;
+import com.example.dietmaker.classes.DietaPerderPeso;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.view.View.generateViewId;
+import static android.widget.LinearLayout.VERTICAL;
+import android.os.Bundle;
 
 
 /**
@@ -32,8 +46,10 @@ public class PerderPeso extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private OnFragmentInteractionListener mListener;
+    private RecyclerView recyclerView;
+    private List<DietaPerderPeso> listaDietaPerderPeso = new ArrayList<>();
 
+    private OnFragmentInteractionListener mListener;
     public PerderPeso() {
         // Required empty public constructor
     }
@@ -59,17 +75,26 @@ public class PerderPeso extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_perder_peso, container, false);
+        View meuLayout = inflater.inflate(R.layout.fragment_ganho__peso, container, false);
+        this.recyclerView = meuLayout.findViewById(R.id.recyGanho);
+        AdapterPerder adapterPerder = new AdapterPerder(listaDietaPerderPeso);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
+        recyclerView.setAdapter(adapterPerder);
+        ((AppCompatActivity)getContext()).getSupportActionBar().setTitle("Dieta para perder de Peso");
+
+
+        return meuLayout;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -109,6 +134,33 @@ public class PerderPeso extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void DietaPerder() {
+
+        DietaPerderPeso dietaPerderPeso = new DietaPerderPeso("Café da manhã","Arroz integral","Suco de laranja (1 Copo Pequeno)\t " +
+                "\nPão integral (Fatia: 1)\t " +
+                "\nRequeijão light (2 Ponta De Faca)\t" +
+                " \nFruta (não especificada) (Porcao: 1)\t","07:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Lanche da manhã","alguma coisa" ,"Castanha do Pará sem sal (Unidade (4g): 1)\t \nUva passa (Colher de sopa cheia (18g): 1)\t","10:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Almoço", "Lorem","Salada, de legumes, cozida no vapor (Colher de Sopa: 3)\t " +
+                "\nPeito de galinha ou frango Cozido(a) (File: 1)\t" +
+                " \nEspaguete, cozido, enriquecido, com sal (2 Pegador)\t " +
+                "\nMolho de tomate (3 Colher de sopa (20g))\t" +
+                " \nChocolate, meio amargo (Pedaço: 1)\t","12:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Lanche da tarde","sla","Suco de abacaxi (Copo Americano: 1)\t \nPão de queijo (Unidade Pequena: 2)\t","16:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Jantar","sdfsd","Blanquet de peru (Fatia: 1)\t \nQueijo prato (Fatia: 1)\t \nRequeijão light (Ponta De Faca: 3)\t \nTomate (3 Fatia média (15g))\t \nAlface, americana, crua (Folha De Hortaliça: 3)\t \nPão integral (2 Fatia)\t \nSuco de uva integral (1 Copo pequeno (165ml))\t \nObs: Alface e tomate à vontade\n" +
+                "\n", "20:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Pós-treino","sdfsadfa","Banana, nanica, crua (Unidade: 1)\t \nObs: 1 banana\n" +
+                "\n", "21:30");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
+        dietaPerderPeso = new DietaPerderPeso("Ceia","sdfsadfa","Iogurte desnatado (1 Pote)\t \nAveia em flocos (1 Colher De Sopa)\t", "23:00");
+        this.listaDietaPerderPeso.add(dietaPerderPeso);
     }
 
 }

@@ -3,7 +3,6 @@ package com.example.dietmaker.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -46,7 +45,9 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
 
         //holder.foto.setImageResource(dietaGanharPeso.getFoto());
         holder.horario.setText(dietaGanharPeso.getHorario());
-        holder.tipo.setText(dietaGanharPeso.getTipo());
+        holder.titulo.setText(dietaGanharPeso.getTitulo());
+        //holder.subtitulo.setText(dietaGanharPeso.getSubtitulo());
+        holder.conteudo.setText((dietaGanharPeso.getConteudo()));
 
         boolean isExpanded = listaDietaGanharPeso.get(position).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
@@ -61,7 +62,9 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
     public class MyViewHolder extends RecyclerView.ViewHolder{
         //ImageView foto;
         TextView horario;
-        TextView tipo;
+        TextView titulo;
+        //TextView subtitulo;
+        TextView conteudo;
         ConstraintLayout expandableLayout;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -69,9 +72,11 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
             expandableLayout = itemView.findViewById(R.id.expandableLayout);
             //foto = itemView.findViewById(R.id.imgFoto);
             horario = itemView.findViewById(R.id.txtHorario);
-            tipo = itemView.findViewById(R.id.txtTipo);
+            titulo = itemView.findViewById(R.id.txtTitulo);
+            //subtitulo = itemView.findViewById(R.id.txtSub);
+            conteudo = itemView.findViewById(R.id.txtContent);
 
-            tipo.setOnClickListener(new View.OnClickListener() {
+            titulo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     DietaGanharPeso dietaGanharPeso = listaDietaGanharPeso.get(getAdapterPosition());
