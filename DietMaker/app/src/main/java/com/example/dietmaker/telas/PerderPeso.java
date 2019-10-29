@@ -131,7 +131,7 @@ public class PerderPeso extends Fragment {
 
     public void DietaPerder() {
 
-        DietaPerderPeso dietaPerderPeso = new DietaPerderPeso("Perder Peso","Arroz integral","Suco de laranja (1 Copo Pequeno)\t " +
+        DietaPerderPeso dietaPerderPeso = new DietaPerderPeso("Café da manhã","Arroz integral","Suco de laranja (1 Copo Pequeno)\t " +
                 "\nPão integral (Fatia: 1)\t " +
                 "\nRequeijão light (2 Ponta De Faca)\t" +
                 " \nFruta (não especificada) (Porcao: 1)\t","07:00");
