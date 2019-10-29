@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@drawable/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,15 +13,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginBottom="7dp"
                 android:text="Dicas para ter bons\n  hábitos alimentares"
                 android:textAlignment="center"
+                android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -29,55 +31,61 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="6dp"
-                android:text="Evite pular refeições: o ideal é fazer pelo menos três refeições por dia (café da manhã, almoço e jantar), intercaladas por pequenos lanches, com intervalo de três a quatro horas entre as refeições. " />
+                android:text="Evite pular refeições: o ideal é fazer pelo menos três refeições por dia (café da manhã, almoço e jantar), intercaladas por pequenos lanches, com intervalo de três a quatro horas entre as refeições. "
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="Fique atento ao sal: o excesso aumenta o risco para hipertensão arterial e doenças cardiovasculares, além de provocar retenção de líquidos e aquela sensação de inchaço. Utilize pouco sal no preparo dos alimentos, investindo nos temperos naturais (como alho, cebola e ervas frescas e secas). Evite o consumo frequente de alimentos embutidos como salsichas, salames, linguiça e presunto." />
+                android:text="Fique atento ao sal: o excesso aumenta o risco para hipertensão arterial e doenças cardiovasculares, além de provocar retenção de líquidos e aquela sensação de inchaço. Utilize pouco sal no preparo dos alimentos, investindo nos temperos naturais (como alho, cebola e ervas frescas e secas). Evite o consumo frequente de alimentos embutidos como salsichas, salames, linguiça e presunto."
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="10dp"
-                android:text="Inclua alimentos integrais na dieta: alimentos na versão integral, como os pães feitos com farinha 100% integral, contribuem com mais fibras na dieta, ajudando na manutenção das taxas de açúcar no sangue em níveis normais. Além disso, eles são uma ferramenta importante para controle da saciedade e do peso.   " />
+                android:text="Inclua alimentos integrais na dieta: alimentos na versão integral, como os pães feitos com farinha 100% integral, contribuem com mais fibras na dieta, ajudando na manutenção das taxas de açúcar no sangue em níveis normais. Além disso, eles são uma ferramenta importante para controle da saciedade e do peso.   "
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="22dp"
-                android:text="Mais gorduras boas: óleos vegetais (azeite extra virgem, canola, soja etc.), castanhas, abacate, peixes e creme vegetal contribuem para redução dos riscos de doenças do coração.  " />
+                android:text="Mais gorduras boas: óleos vegetais (azeite extra virgem, canola, soja etc.), castanhas, abacate, peixes e creme vegetal contribuem para redução dos riscos de doenças do coração.  "
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="10dp"
-                android:text="Beba mais água: seis a oito copos por dia contribuem para o funcionamento do organismo. Além disso, a hidratação adequada traz consequências positivas para intestino, cabelos, pele e unhas. Mantenha uma garrafinha de água sempre por perto. Tire um intervalo da água no trabalho. Crie uma regra com seu copo d?água: estando vazio, encha-o. Coloque seu celular para despertar ou crie alertas no seu e-mail para lembrá-lo de beber água." />
+                android:text="Beba mais água: seis a oito copos por dia contribuem para o funcionamento do organismo. Além disso, a hidratação adequada traz consequências positivas para intestino, cabelos, pele e unhas. Mantenha uma garrafinha de água sempre por perto. Tire um intervalo da água no trabalho. Crie uma regra com seu copo d?água: estando vazio, encha-o. Coloque seu celular para despertar ou crie alertas no seu e-mail para lembrá-lo de beber água."
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="Atenção com as bebidas alcóolicas: contém 7 kcal por grama, quase tanto quanto a gordura, e não tem nenhum benefício nutricional. Além de ser fonte de calorias vazias, o álcool pode conduzir à hipoglicemia, seguida por picos de fome. O excesso ainda prejudica o funcionamento do fígado. " />
+                android:text="Atenção com as bebidas alcóolicas: contém 7 kcal por grama, quase tanto quanto a gordura, e não tem nenhum benefício nutricional. Além de ser fonte de calorias vazias, o álcool pode conduzir à hipoglicemia, seguida por picos de fome. O excesso ainda prejudica o funcionamento do fígado. "
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </ScrollView>
 

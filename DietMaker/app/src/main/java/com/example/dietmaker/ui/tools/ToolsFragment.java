@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -17,12 +18,15 @@ import com.example.dietmaker.R;
 public class ToolsFragment extends Fragment {
 
     private ToolsViewModel toolsViewModel;
+    private WebView webView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         toolsViewModel =
                 ViewModelProviders.of(this).get(ToolsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_tools, container, false);
+
+
 
         toolsViewModel.getText().observe(this, new Observer<String>() {
             @Override
