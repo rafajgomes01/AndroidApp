@@ -47,6 +47,8 @@ public class HomeFragment extends Fragment {
                 FragmentTransaction mudartela = getActivity().getSupportFragmentManager().beginTransaction();
                 mudartela.replace(R.id.nav_host_fragment, perderPeso);
                 mudartela.commit();
+
+
             }
 
         });
