@@ -6,98 +6,80 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
-        android:text="Dicas para ter bons\n  hábitos alimentares"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="10dp"
-        android:text="Beba mais água: seis a oito copos por dia contribuem para o funcionamento do organismo. Além disso, a hidratação adequada traz consequências positivas para intestino, cabelos, pele e unhas. Mantenha uma garrafinha de água sempre por perto. Tire um intervalo da água no trabalho. Crie uma regra com seu copo d?água: estando vazio, encha-o. Coloque seu celular para despertar ou crie alertas no seu e-mail para lembrá-lo de beber água."
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="6dp"
-        android:text="Evite pular refeições: o ideal é fazer pelo menos três refeições por dia (café da manhã, almoço e jantar), intercaladas por pequenos lanches, com intervalo de três a quatro horas entre as refeições. "
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:text="Dicas para ter bons\n  hábitos alimentares"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Fique atento ao sal: o excesso aumenta o risco para hipertensão arterial e doenças cardiovasculares, além de provocar retenção de líquidos e aquela sensação de inchaço. Utilize pouco sal no preparo dos alimentos, investindo nos temperos naturais (como alho, cebola e ervas frescas e secas). Evite o consumo frequente de alimentos embutidos como salsichas, salames, linguiça e presunto."
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="6dp"
+                android:text="Evite pular refeições: o ideal é fazer pelo menos três refeições por dia (café da manhã, almoço e jantar), intercaladas por pequenos lanches, com intervalo de três a quatro horas entre as refeições. " />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Atenção com as bebidas alcóolicas: contém 7 kcal por grama, quase tanto quanto a gordura, e não tem nenhum benefício nutricional. Além de ser fonte de calorias vazias, o álcool pode conduzir à hipoglicemia, seguida por picos de fome. O excesso ainda prejudica o funcionamento do fígado. "
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Fique atento ao sal: o excesso aumenta o risco para hipertensão arterial e doenças cardiovasculares, além de provocar retenção de líquidos e aquela sensação de inchaço. Utilize pouco sal no preparo dos alimentos, investindo nos temperos naturais (como alho, cebola e ervas frescas e secas). Evite o consumo frequente de alimentos embutidos como salsichas, salames, linguiça e presunto." />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="10dp"
-        android:text="Inclua alimentos integrais na dieta: alimentos na versão integral, como os pães feitos com farinha 100% integral, contribuem com mais fibras na dieta, ajudando na manutenção das taxas de açúcar no sangue em níveis normais. Além disso, eles são uma ferramenta importante para controle da saciedade e do peso.   "
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Inclua alimentos integrais na dieta: alimentos na versão integral, como os pães feitos com farinha 100% integral, contribuem com mais fibras na dieta, ajudando na manutenção das taxas de açúcar no sangue em níveis normais. Além disso, eles são uma ferramenta importante para controle da saciedade e do peso.   " />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="22dp"
-        android:text="Mais gorduras boas: óleos vegetais (azeite extra virgem, canola, soja etc.), castanhas, abacate, peixes e creme vegetal contribuem para redução dos riscos de doenças do coração.  "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="22dp"
+                android:text="Mais gorduras boas: óleos vegetais (azeite extra virgem, canola, soja etc.), castanhas, abacate, peixes e creme vegetal contribuem para redução dos riscos de doenças do coração.  " />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Beba mais água: seis a oito copos por dia contribuem para o funcionamento do organismo. Além disso, a hidratação adequada traz consequências positivas para intestino, cabelos, pele e unhas. Mantenha uma garrafinha de água sempre por perto. Tire um intervalo da água no trabalho. Crie uma regra com seu copo d?água: estando vazio, encha-o. Coloque seu celular para despertar ou crie alertas no seu e-mail para lembrá-lo de beber água." />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Atenção com as bebidas alcóolicas: contém 7 kcal por grama, quase tanto quanto a gordura, e não tem nenhum benefício nutricional. Além de ser fonte de calorias vazias, o álcool pode conduzir à hipoglicemia, seguida por picos de fome. O excesso ainda prejudica o funcionamento do fígado. " />
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
