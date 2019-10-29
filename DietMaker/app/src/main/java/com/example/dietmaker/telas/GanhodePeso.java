@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -74,6 +75,7 @@ public class GanhodePeso extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
     }
 
@@ -91,6 +93,7 @@ public class GanhodePeso extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
         recyclerView.setAdapter(adapterGanho);
+        ((AppCompatActivity)getContext()).getSupportActionBar().setTitle("Dieta para ganhar Peso");
         /*recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(
                         getContext(),

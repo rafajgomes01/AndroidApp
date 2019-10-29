@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toolbar;
 
 import com.example.dietmaker.R;
 import com.example.dietmaker.adapter.AdapterPerder;
@@ -20,7 +22,9 @@ import com.example.dietmaker.classes.DietaPerderPeso;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.view.View.generateViewId;
 import static android.widget.LinearLayout.VERTICAL;
+import android.os.Bundle;
 
 
 /**
@@ -46,7 +50,6 @@ public class PerderPeso extends Fragment {
     private List<DietaPerderPeso> listaDietaPerderPeso = new ArrayList<>();
 
     private OnFragmentInteractionListener mListener;
-
     public PerderPeso() {
         // Required empty public constructor
     }
@@ -72,20 +75,24 @@ public class PerderPeso extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View meuLayout = inflater.inflate(R.layout.fragment_ganho__peso, container, false);        this.recyclerView = meuLayout.findViewById(R.id.recyGanho);
+        View meuLayout = inflater.inflate(R.layout.fragment_ganho__peso, container, false);
+        this.recyclerView = meuLayout.findViewById(R.id.recyGanho);
         AdapterPerder adapterPerder = new AdapterPerder(listaDietaPerderPeso);
-
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
         recyclerView.setAdapter(adapterPerder);
+        ((AppCompatActivity)getContext()).getSupportActionBar().setTitle("Dieta para perder de Peso");
+
 
         return meuLayout;
     }

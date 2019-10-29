@@ -14,19 +14,19 @@
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_graficozinho"
+            android:icon="@drawable/ic_comer"
             android:title="@string/menu_slideshow" />
         <item
             android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_comer"
+            android:icon="@drawable/iconedoc"
             android:title="@string/menu_tools" />
         <item
             android:id="@+id/nav_share"
-            android:icon="@drawable/ic_coracu"
+            android:icon="@drawable/entreemcontato"
             android:title="@string/menu_share" />
         <item
             android:id="@+id/nav_send"
-            android:icon="@drawable/ic_coracu"
+            android:icon="@drawable/sejapremium"
             android:title="@string/menu_send" />
 <!--        <item-->
 <!--            android:id="@+id/testeFragment"-->
