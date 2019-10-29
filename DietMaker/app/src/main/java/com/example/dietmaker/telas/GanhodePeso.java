@@ -101,7 +101,7 @@ public class GanhodePeso extends Fragment {
                                 DietaGanharPeso ganho = listaDietaGanharPeso.get(position);
 
                                 Toast.makeText(getContext(), "item clicado " + ganho.getTitulo() , Toast.LENGTH_SHORT).show();
-=======
+
 
                                 Toast.makeText(getContext(), "item clicado " + ganho.getTipo(), Toast.LENGTH_SHORT).show();
 
