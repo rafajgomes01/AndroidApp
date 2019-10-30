@@ -9,14 +9,16 @@
 
     <Button
         android:id="@+id/batata"
-        android:layout_width="128dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="48dp"
+        android:layout_width="177dp"
+        android:layout_height="57dp"
         android:background="@drawable/botao_arredondado"
         android:onClick="manualPdf"
         android:text="Ir para o manual"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949" />
 </androidx.constraintlayout.widget.ConstraintLayout>
