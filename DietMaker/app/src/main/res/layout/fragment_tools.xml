@@ -4,15 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark" >
+    android:background="@drawable/manualfundo"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="409dp"
-        android:layout_height="657dp"
+    <Button
+        android:id="@+id/batata"
+        android:layout_width="128dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/botao_arredondado"
+        android:onClick="manualPdf"
+        android:text="Ir para o manual"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

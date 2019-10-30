@@ -118,6 +118,12 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         startActivity(intent);
     }
 
+    public void manualPdf(View view) {
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("https://docs.google.com/document/d/e/2PACX-1vSIYgROaHismmYDcCDSVwxWp2hAG21PSosjXu9hqwaIVmNJ8fKNcr8OgHzeTHqD_dWTcaD1aRgS0pNB/pub"));
+        startActivity(intent);
+    }
+
     // Código botão Voltar
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         //Handle the back button

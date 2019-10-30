@@ -18,7 +18,7 @@ import com.example.dietmaker.R;
 public class ToolsFragment extends Fragment {
 
     private ToolsViewModel toolsViewModel;
-    private WebView webView;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
