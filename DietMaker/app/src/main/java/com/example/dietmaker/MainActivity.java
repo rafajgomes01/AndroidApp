@@ -118,6 +118,12 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         startActivity(intent);
     }
 
+    public void manualPdf(View view) {
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("https://drive.google.com/file/d/16GOus6L1nHlo1ksG-QRyTbT_EmP9ghNH/view?usp=sharing"));
+        startActivity(intent);
+    }
+
     // Código botão Voltar
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         //Handle the back button
@@ -132,15 +138,15 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
 
     private void checkExit() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Deseja realmente sair?")
+        builder.setMessage("Você é Bonito?")
                 .setCancelable(false)
-                .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Não", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         finish();
                         //Ação tomada caso o usuário escolha sim.
                     }
                 })
-                .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Sim", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                     }
