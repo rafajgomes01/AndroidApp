@@ -15,9 +15,13 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.dietmaker.classes.DietaPerderPeso;
 import com.example.dietmaker.telas.GanhodePeso;
 import com.example.dietmaker.telas.PerderPeso;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -32,6 +36,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFragmentInteractionListener, PerderPeso.OnFragmentInteractionListener {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,15 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        DatabaseReference user = referencia.child("user");
+
+        DietaPerderPeso dietaPerderPeso = new DietaPerderPeso();
+        dietaPerderPeso.setConteudo("batata");
+        dietaPerderPeso.setHorario("1555");
+        dietaPerderPeso.setTitulo("teste");
+
+        user.child("001").setValue(dietaPerderPeso);
 
     }
 
@@ -138,15 +152,15 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
 
     private void checkExit() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Você é Bonito?")
+        builder.setMessage("Você deseja sair?")
                 .setCancelable(false)
-                .setPositiveButton("Não", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         finish();
                         //Ação tomada caso o usuário escolha sim.
                     }
                 })
-                .setNegativeButton("Sim", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Não", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                     }
