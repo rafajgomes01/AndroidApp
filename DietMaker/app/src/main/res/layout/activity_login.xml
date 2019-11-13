@@ -87,6 +87,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/btn_bd"
+        android:onClick="logarUsuario"
         android:text="Login"
         android:textAllCaps="false"
         android:textColor="#fff"
