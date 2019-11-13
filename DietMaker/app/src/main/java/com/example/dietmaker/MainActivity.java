@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
 
         user.child("001").setValue(dietaPerderPeso);
         */
-         btnLogar.findViewById(R.id.button3);
+         //btnLogar.findViewById(R.id.button3);
     }
 
     @Override
@@ -245,9 +245,5 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         alert.show();
     }
 
-    public void logarUsuario(View view) {
-        Login login = new Login();
-        login.logar(View);
-    }
 
 }

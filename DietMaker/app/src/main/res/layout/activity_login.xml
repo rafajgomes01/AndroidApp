@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
     android:orientation="vertical"
     android:paddingTop="55dp"
-    tools:context=".MainActivity">
+    tools:context=".telas.Login">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -87,8 +86,8 @@
         android:layout_height="40dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/btn_bd"
-        android:onClick="logarUsuario"
         android:text="Login"
+        android:onClick="logar"
         android:textAllCaps="false"
         android:textColor="#fff"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -21,12 +21,12 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
 
-    private FirebaseAuth usuario = FirebaseAuth.getInstance();
-
+    private FirebaseAuth usuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        this.usuario = FirebaseAuth.getInstance();
 
     }
 
