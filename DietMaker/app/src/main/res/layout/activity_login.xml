@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/gradient"
     android:paddingTop="55dp"
     tools:context=".telas.Login">
 
@@ -30,7 +31,7 @@
         app:layout_constraintVertical_bias="0.252">
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/editEmail"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:background="@drawable/shape_line"
@@ -46,7 +47,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/editPassword"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
@@ -60,34 +61,35 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCadastrar"
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/btn_bd"
         android:text="Cadastro"
+        android:onClick="cadastro"
         android:textAllCaps="false"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogar"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnLogar"
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/btn_bd"
         android:text="Login"
-        android:onClick="logar"
+        android:onClick="login"
         android:textAllCaps="false"
         android:textColor="#fff"
         app:layout_constraintLeft_toLeftOf="parent"
