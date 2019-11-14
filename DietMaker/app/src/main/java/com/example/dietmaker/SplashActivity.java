@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.dietmaker.telas.Login;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -15,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashActivity.this, MainActivity.class);
+                Intent it = new Intent(SplashActivity.this, Login.class);
                 startActivity(it);
                 onStop();
                 finish();

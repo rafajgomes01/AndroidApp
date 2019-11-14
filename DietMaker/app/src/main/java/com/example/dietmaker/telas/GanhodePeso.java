@@ -173,7 +173,7 @@ public class GanhodePeso extends Fragment {
                 " \nFruta (não especificada) (Unidade: 1)\t " +
                 "\nPasta de amendoim (Grama: 15)\t " +
                 "\nLeite de vaca integral (Copo Americano: 1)\t" +
-                " \n OBS: -Preparar a tapioca com 5 colheres de sopa + 2 colheres de sopa de atum light + 1 fatia de queijo mussarela;" +
+                "\nOBS: -Preparar a tapioca com 5 colheres de sopa + 2 colheres de sopa de atum light + 1 fatia de queijo mussarela;" +
                 "\n-2 opção - 2 torradas + 2 fatias de queijo mussarela + 2 fatias de peito de peru ou de frango defumado + 1 ponta de faca de requeijão light;" +
                 "\n- O leite integral pode ser mantido + 2 colheres do Nutren ( EVITE O USO DO ACHOCOLATADO,INTRODUZA O CACAU EM PÓ OU ALGUM OUTRO ACHOCOLATADO SEM ADIÇÃO DE AÇÚCAR);" +
                 "\n-Consuma com moderação a farinha láctea,consuma em dias alternados duas colheres apenas." +

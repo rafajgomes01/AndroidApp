@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "5812348724",
+    "firebase_url": "https://dietmaker-7dd05.firebaseio.com",
+    "project_id": "dietmaker-7dd05",
+    "storage_bucket": "dietmaker-7dd05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5812348724:android:022967a7a2c20be89c2761",
+        "android_client_info": {
+          "package_name": "com.example.dietmaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5812348724-n749p1p32polb5k6t6cjannispjjv04a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp_WDiwWJq7AkDyDLuYc3t7YKW2H3iff0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5812348724-n749p1p32polb5k6t6cjannispjjv04a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
