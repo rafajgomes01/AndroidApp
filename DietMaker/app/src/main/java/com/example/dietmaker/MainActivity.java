@@ -31,6 +31,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -134,15 +135,63 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         */
 
         // adicionar dados estaticos
+
+        //DatabaseReference user = referencia.child("user");
+
         /*
         DietaPerderPeso dietaPerderPeso = new DietaPerderPeso();
-        dietaPerderPeso.setConteudo("batata");
+        dietaPerderPeso.setConteudo("teste");
         dietaPerderPeso.setHorario("1555");
         dietaPerderPeso.setTitulo("teste");
-
-        user.child("001").setValue(dietaPerderPeso);
         */
-         //btnLogar.findViewById(R.id.button3);
+
+
+        //user.child("001").setValue(dietaPerderPeso);
+
+        //gerar um identificador unico para um nó
+        //user.push().setValue(dietaPerderPeso);
+
+
+        // filtro pelo ID unico
+        //DatabaseReference usuarioPesquisa = usuarios.child("-Ltg7OgGYFC7cfQTNVpS");
+
+        // pesquisar por um nó com um valor especifico
+        //final Query usuarioPesquisa = user.orderByChild("horario").equalTo("1555");
+
+        // mostrar os primeiros e ultimos valores da tabela
+        //final Query usuarioPesquisa = user.orderByKey().limitToFirst(3);
+        //final Query usuarioPesquisa = user.orderByKey().limitToLast(3);
+
+        // pesquisar por maior ou igual
+        //final Query usuarioPesquisa = user.orderByChild("horario").startAt("1999");
+
+        // pesquisar por menor ou igual
+        //final Query usuarioPesquisa = user.orderByChild("horario").endAt("1500");
+
+
+        // pesquisar entre dois valores
+        final Query usuarioPesquisa = user.orderByChild("horario").startAt("1400").endAt("1500");
+
+
+
+        usuarioPesquisa.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //puxa os dados do usuário em forma de lista
+                Log.i("DadosUser", dataSnapshot.toString());
+
+                // como recuperar um user utilziando um objeto
+                //DietaPerderPeso dadosUsuario = dataSnapshot.getValue(DietaPerderPeso.class);
+                //Log.i("DadosUser", "nome " + dadosUsuario.getTitulo());
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     @Override
