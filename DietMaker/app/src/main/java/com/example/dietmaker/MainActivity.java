@@ -170,10 +170,10 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
 
 
         // pesquisar entre dois valores
-        final Query usuarioPesquisa = user.orderByChild("horario").startAt("1400").endAt("1500");
+        // final Query usuarioPesquisa = user.orderByChild("horario").startAt("1400").endAt("1500");
 
 
-
+        /*
         usuarioPesquisa.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
     }
 
