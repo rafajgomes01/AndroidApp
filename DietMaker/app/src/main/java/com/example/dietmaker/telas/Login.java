@@ -1,6 +1,5 @@
 package com.example.dietmaker.telas;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -72,7 +71,6 @@ public class Login extends AppCompatActivity {
 
     }
 
-
     public void cadastro(View view) {
         String mail = email.getText().toString();
         String pass = password.getText().toString();
@@ -83,7 +81,7 @@ public class Login extends AppCompatActivity {
             password.setError("Digite sua senha");
             password.requestFocus();
         } else if (mail.isEmpty() && pass.isEmpty()) {
-                Toast toast = Toast.makeText(Login.this, "Preencha os campos", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(Login.this, "Preencha os campos", Toast.LENGTH_SHORT);
             toast.show();
         } else if (!mail.isEmpty() && !pass.isEmpty()) {
             usuario.createUserWithEmailAndPassword(mail, pass).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {

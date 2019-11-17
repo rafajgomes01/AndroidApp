@@ -53,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:gravity="center"
-                    android:text="peso"
+                    android:text="Peso"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
@@ -82,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:gravity="center"
-                    android:text="altura"
+                    android:text="Altura"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
@@ -134,11 +134,39 @@
 
                 <TextView
                     android:id="@+id/txtBracoEsquerdo"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Braço direito contraido"
+                    android:textColor="#FFFFFF"></TextView>
+
+                <EditText
+                    android:id="@+id/editBracoDireContra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ems="15"
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:theme="@style/MyEditTextTheme" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txt1"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
                     android:gravity="left"
-                    android:text="Braço Esquerdo"
+                    android:text="Braço esquerdo"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
@@ -161,42 +189,15 @@
                 android:padding="5dp">
 
                 <TextView
-                    android:id="@+id/txt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
-                    android:textColor="#FFFFFF"></TextView>
-
-                <EditText
-                    android:id="@+id/edit1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:ems="15"
-                    android:inputType="numberDecimal"
-                    android:textColor="#FFFFFF"
-                    android:theme="@style/MyEditTextTheme" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:padding="5dp">
-
-                <TextView
                     android:id="@+id/txt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Braço esquerdo contraído"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit2"
+                    android:id="@+id/editBracoEsqContra"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -216,14 +217,15 @@
 
                 <TextView
                     android:id="@+id/txt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="left"
+                    android:text="Antebraço direito"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit3"
+                    android:id="@+id/editAnteDire"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -243,14 +245,15 @@
 
                 <TextView
                     android:id="@+id/txt4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Antebraço esquerdo"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit4"
+                    android:id="@+id/editAnteEsque"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -270,14 +273,15 @@
 
                 <TextView
                     android:id="@+id/txt5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Punho direito"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit5"
+                    android:id="@+id/editPunhoDire"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -297,14 +301,15 @@
 
                 <TextView
                     android:id="@+id/txt6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Punho esquerdo"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit6"
+                    android:id="@+id/editpunhoEsqu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -324,14 +329,15 @@
 
                 <TextView
                     android:id="@+id/txt7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Pescoço"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit7"
+                    android:id="@+id/editPescoco"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -351,14 +357,15 @@
 
                 <TextView
                     android:id="@+id/txt8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginBottom="15dp"
+                    android:text="Ombro"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit8"
+                    android:id="@+id/editOmbro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -378,14 +385,15 @@
 
                 <TextView
                     android:id="@+id/txt9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Peitoral"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit9"
+                    android:id="@+id/editPeitoral"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -405,14 +413,15 @@
 
                 <TextView
                     android:id="@+id/txt10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Cintura"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit10"
+                    android:id="@+id/editCintura"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -432,14 +441,15 @@
 
                 <TextView
                     android:id="@+id/txt11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Abdomen"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit11"
+                    android:id="@+id/editAbdomen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -459,14 +469,15 @@
 
                 <TextView
                     android:id="@+id/txt12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Quadril"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit12"
+                    android:id="@+id/editQuadril"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -486,14 +497,15 @@
 
                 <TextView
                     android:id="@+id/txt13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Panturrilha direita"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit13"
+                    android:id="@+id/editPantuDire"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -513,14 +525,15 @@
 
                 <TextView
                     android:id="@+id/txt14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Panturrilha esquerda"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit14"
+                    android:id="@+id/editPantuEsqu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -540,14 +553,15 @@
 
                 <TextView
                     android:id="@+id/txt15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Coxa direita"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit15"
+                    android:id="@+id/editCoxaDire"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -567,14 +581,15 @@
 
                 <TextView
                     android:id="@+id/txt16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Coxa esquerda"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit16"
+                    android:id="@+id/editCoxaEsqu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -594,14 +609,15 @@
 
                 <TextView
                     android:id="@+id/txt17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Coxa proximal direita"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit17"
+                    android:id="@+id/editCoxaProxDir"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -621,14 +637,15 @@
 
                 <TextView
                     android:id="@+id/txt18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:text="altura"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left"
+                    android:text="Coxa proximal esquerda"
                     android:textColor="#FFFFFF"></TextView>
 
                 <EditText
-                    android:id="@+id/edit18"
+                    android:id="@+id/editCoxaProxEsqu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
