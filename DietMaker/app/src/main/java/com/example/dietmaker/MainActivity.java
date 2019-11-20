@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
@@ -17,39 +15,30 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.dietmaker.classes.DietaPerderPeso;
 import com.example.dietmaker.telas.GanhodePeso;
 import com.example.dietmaker.telas.Login;
+import com.example.dietmaker.telas.Logout;
 import com.example.dietmaker.telas.PerderPeso;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFragmentInteractionListener, PerderPeso.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFragmentInteractionListener, PerderPeso.OnFragmentInteractionListener, Logout.OnFragmentInteractionListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
-    private FirebaseAuth usuario = FirebaseAuth.getInstance();
+    public FirebaseAuth usuario = FirebaseAuth.getInstance();
     private Button btnLogar;
 
     @Override
@@ -94,13 +83,15 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         //usuario.signOut();
 
         // metodo para verificar se está logado
-        /*
+
         if(usuario.getCurrentUser() != null){
-            Log.i("CurrentUser", "usuário logado");
+            Toast toast = Toast.makeText(this, "Seja bem vindo", Toast.LENGTH_SHORT);
+            toast.show();
         } else {
-            Log.i("CurrentUser", "usuario não logado");
+            Intent it = new Intent(this, Login.class);
+            startActivity(it);
         }
-        */
+
 
 
         // cadastrar um usuario
@@ -275,13 +266,13 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
     }
 
 
-    private void checkExit() {
+    public void checkExit() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Você deseja sair?")
                 .setCancelable(false)
                 .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        finish();
+                        finishAffinity();
                         //Ação tomada caso o usuário escolha sim.
                     }
                 })

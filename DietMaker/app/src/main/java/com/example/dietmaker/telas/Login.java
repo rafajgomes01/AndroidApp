@@ -1,11 +1,14 @@
 package com.example.dietmaker.telas;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,7 +42,6 @@ public class Login extends AppCompatActivity {
         this.login = findViewById(R.id.btnLogar);
         this.cadastro = findViewById(R.id.btnCadastrar);
 
-
     }
 
     public void login(View view) {
@@ -59,6 +61,8 @@ public class Login extends AppCompatActivity {
                         Toast toast = Toast.makeText(Login.this, "Usuário ou senha incorretos", Toast.LENGTH_SHORT);
                         toast.show();
                     } else {
+                        Toast toast = Toast.makeText(Login.this, "Usuário logado com sucesso", Toast.LENGTH_SHORT);
+                        toast.show();
                         startActivity(new Intent(Login.this, MainActivity.class));
                         finish();
                     }
@@ -100,6 +104,36 @@ public class Login extends AppCompatActivity {
             Toast toast = Toast.makeText(Login.this, "Programador ruim demais", Toast.LENGTH_SHORT);
             toast.show();
         }
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        //Handle the back button
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            checkExit();
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
+        }
+    }
+
+
+    public void checkExit() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Você deseja sair?")
+                .setCancelable(false)
+                .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finishAffinity();
+                        //Ação tomada caso o usuário escolha sim.
+                    }
+                })
+                .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
 }
