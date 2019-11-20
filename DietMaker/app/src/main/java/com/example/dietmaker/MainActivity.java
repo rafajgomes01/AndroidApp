@@ -18,6 +18,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.dietmaker.telas.GanhodePeso;
 import com.example.dietmaker.telas.Login;
 import com.example.dietmaker.telas.Logout;
+import com.example.dietmaker.telas.NovaDieta;
 import com.example.dietmaker.telas.PerderPeso;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,7 +35,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFragmentInteractionListener, PerderPeso.OnFragmentInteractionListener, Logout.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFragmentInteractionListener, PerderPeso.OnFragmentInteractionListener, Logout.OnFragmentInteractionListener, NovaDieta.OnFragmentInteractionListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();

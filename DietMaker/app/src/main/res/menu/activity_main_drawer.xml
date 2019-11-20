@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_accessibility"
             android:title="@string/menu_gallery" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/novaDieta"
             android:icon="@drawable/ic_comer"
-            android:title="@string/menu_slideshow" />
+            android:title="Crie sua dieta" />
         <item
             android:id="@+id/nav_tools"
             android:icon="@drawable/iconedoc"
@@ -30,7 +30,7 @@
             android:title="@string/menu_send" />
         <item
             android:id="@+id/logout"
-            android:icon="@drawable/ic_casinha"
+            android:icon="@drawable/ic_logout_24dp"
             android:title="Logout" />
 
 

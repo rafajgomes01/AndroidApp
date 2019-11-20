@@ -94,34 +94,7 @@ public class GanhodePeso extends Fragment {
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
         recyclerView.setAdapter(adapterGanho);
         ((AppCompatActivity)getContext()).getSupportActionBar().setTitle("Dieta para ganhar Peso");
-        /*recyclerView.addOnItemTouchListener(
-                new RecyclerItemClickListener(
-                        getContext(),
-                        recyclerView,
-                        new RecyclerItemClickListener.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(View view, int position) {
-                                DietaGanharPeso ganho = listaDietaGanharPeso.get(position);
 
-                                Toast.makeText(getContext(), "item clicado " + ganho.getTitulo() , Toast.LENGTH_SHORT).show();
-
-
-                                Toast.makeText(getContext(), "item clicado " + ganho.getTipo(), Toast.LENGTH_SHORT).show();
-
-                            }
-
-                            @Override
-                            public void onLongItemClick(View view, int position) {
-                                Toast.makeText(getContext(), "item segurado", Toast.LENGTH_SHORT).show();
-                            }
-
-                            @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                            }
-                        }
-                )
-        );*/
 
         return meuLayout;
     }

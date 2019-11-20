@@ -45,6 +45,11 @@
         android:name="com.example.dietmaker.telas.Logout"
         android:label="fragment_logout"
         tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/novaDieta"
+        android:name="com.example.dietmaker.telas.NovaDieta"
+        android:label="fragment_nova_dieta"
+        tools:layout="@layout/fragment_nova_dieta" />
     <!--    <fragment-->
 <!--        android:id="@+id/testeFragment"-->
 <!--        android:name="com.example.dietmaker.telas.GanhodePeso"-->
