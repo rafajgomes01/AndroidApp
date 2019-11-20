@@ -28,13 +28,6 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
 
 
         View itemLista = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_lista, parent, false);
-        /*Button btn = itemLista.findViewById(jjhk);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });*/
 
         return new MyViewHolder(itemLista);
     }
@@ -43,10 +36,8 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         DietaGanharPeso dietaGanharPeso = listaDietaGanharPeso.get(position);
 
-        //holder.foto.setImageResource(dietaGanharPeso.getFoto());
         holder.horario.setText(dietaGanharPeso.getHorario());
         holder.titulo.setText(dietaGanharPeso.getTitulo());
-        //holder.subtitulo.setText(dietaGanharPeso.getSubtitulo());
         holder.conteudo.setText((dietaGanharPeso.getConteudo()));
 
         boolean isExpanded = listaDietaGanharPeso.get(position).isExpanded();
@@ -60,20 +51,16 @@ public class AdapterGanho extends RecyclerView.Adapter<AdapterGanho.MyViewHolder
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        //ImageView foto;
         TextView horario;
         TextView titulo;
-        //TextView subtitulo;
         TextView conteudo;
         ConstraintLayout expandableLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             expandableLayout = itemView.findViewById(R.id.expandableLayout);
-            //foto = itemView.findViewById(R.id.imgFoto);
             horario = itemView.findViewById(R.id.txtHorario);
             titulo = itemView.findViewById(R.id.txtTitulo);
-            //subtitulo = itemView.findViewById(R.id.txtSub);
             conteudo = itemView.findViewById(R.id.txtContent);
 
             titulo.setOnClickListener(new View.OnClickListener() {

@@ -17,26 +17,17 @@ public class DietaGanharPeso {
         this.expanded = expanded;
     }
 
-    public DietaGanharPeso(){
+    public DietaGanharPeso() {
 
     }
 
-    public DietaGanharPeso(/*int foto,*/ String titulo, String subtitulo, String conteudo, String horario) {
-        //this.foto = foto;
+    public DietaGanharPeso(String titulo, String conteudo, String horario) {
         this.titulo = titulo;
         this.horario = horario;
-        //this.subtitulo = subtitulo;
         this.conteudo = conteudo;
         this.expanded = false;
     }
 
-    /*public int getFoto() {
-        return foto;
-    }
-
-    public void setFoto(int foto) {
-        this.foto = foto;
-    }*/
 
     public String getTitulo() {
         return titulo;
@@ -45,14 +36,6 @@ public class DietaGanharPeso {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-
-   // public String getSubtitulo() {
-       // return subtitulo;
-   // }
-
-    /*public void setSubtitulo(String subtitulo) {
-        this.subtitulo = subtitulo;
-    }*/
 
     public String getHorario() {
         return horario;

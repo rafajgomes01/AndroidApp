@@ -140,7 +140,7 @@ public class GanhodePeso extends Fragment {
 
     public void DietaGanho() {
 
-        DietaGanharPeso dietaGanharPeso = new DietaGanharPeso("Café da manhã","Arroz integral","Tapioca de goma (Unidade: 1)\t " +
+        DietaGanharPeso dietaGanharPeso = new DietaGanharPeso("Café da manhã","Tapioca de goma (Unidade: 1)\t " +
                 "\nAtum light ralado - Gomes da Costa® (Colher de sopa (20g): 2)\t" +
                 " \nQueijo tipo mussarela (Fatia (13,5g): 1)\t" +
                 " \nFruta (não especificada) (Unidade: 1)\t " +
@@ -153,14 +153,14 @@ public class GanhodePeso extends Fragment {
                 "\n-Mastigue bem os alimentos!" +
                 "\n","06:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso("Lanche da manhã","alguma coisa" ,"Pão de forma light - Wickbold® (Fatia (20g): 2)\t " +
+        dietaGanharPeso = new DietaGanharPeso("Lanche da manhã","Pão de forma light - Wickbold® (Fatia (20g): 2)\t " +
                 "\nPeito de peru light (Fatia: 1)\t " +
                 "\nQueijo de minas light (Fatia: 2)\t " +
                 "\nObs: -Tente introduzir aos poucos o pão integral e também o queijo branco,o integral irá melhorar o suporte de vitaminas e minerais e o queijo branco é uma alternativa mais leve á mussarela;" +
                 "\n- Em dias mais corridos, consuma uma barra de castanhas + 1 fruta (banana, maçã,pera, 1/2 mamão ,1 fatia de melão ou fatia de abacaxi),ou pode ser também um suco da fruta.\n"
                 ,"10:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso("Almoço", "Lorem","Arroz branco (cozido) (Colher de sopa rasa (15g): 5)\t" +
+        dietaGanharPeso = new DietaGanharPeso("Almoço", "Arroz branco (cozido) (Colher de sopa rasa (15g): 5)\t" +
                 " \nFeijão cozido (só grãos) (Colher de servir (48g): 1)\t" +
                 " \nFilé de frango grelhado (Filé pequeno (100g): 1)\t" +
                 " \nObs: -adicione a sua refeição vegetais cozidos ( 3 colheres de sopa );" +
@@ -168,7 +168,7 @@ public class GanhodePeso extends Fragment {
                 "\n-evite o consumo excessivo de sal!\n-Beba líquidos 20 minutos antes ou após as refeições!\n"
                 ,"14:00");
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso("Pré treino","sla","BCAA 3000 - Max Titanium (Grama: 3)\t " +
+        dietaGanharPeso = new DietaGanharPeso("Pré treino","BCAA 3000 - Max Titanium (Grama: 3)\t " +
                 "\nBanana (Unidade pequena (42g): 1)\t " +
                 "\nObs: -Tomar 3 gramas de bcaa´s ( Max Titanium,Black Skull,Optimum Nutrition , Arnold );" +
                 "\n-Junto ao Bcaa´s,consuma uma fruta (banana,maçã,pera,laranja(suco),porção de morangos ( 8 unidades );" +
@@ -176,7 +176,7 @@ public class GanhodePeso extends Fragment {
         /*this.listaDietaGanharPeso.add(dietaGanharPeso);
         dietaGanharPeso = new DietaGanharPeso("Pós treino","sdfsd","asdfsadfsdfsdaf", "20:00");*/
         this.listaDietaGanharPeso.add(dietaGanharPeso);
-        dietaGanharPeso = new DietaGanharPeso("Janta","sdfsadfa","Batata doce, cozida, sem pele, sem sal (Unidade Pequena: 1)\t " +
+        dietaGanharPeso = new DietaGanharPeso("Janta", "Batata doce, cozida, sem pele, sem sal (Unidade Pequena: 1)\t " +
                 "\nCarne, bovina, patinho, sem gordura, grelhado (Grama: 60)\t " +
                 "\nObs: -Como alternativa ao patinho moído ( 3 colheres de sopa cheia),você pode preparar 1 filé de frango grelhado pequeno ou fazer uma omelete com 3 ovos(utilizando apenas uma clara );" +
                 "\n-Utilize uma xícara de chá de macarrão (tente introduzir o integral aos poucos ) no lugar da batata ou consuma 5 colheres de arroz (tente introduzir o integral aos poucos também);" +

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
@@ -15,6 +16,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.dietmaker.adapter.AdapterNovaDieta;
+import com.example.dietmaker.classes.DietaPerderPeso;
 import com.example.dietmaker.telas.GanhodePeso;
 import com.example.dietmaker.telas.Login;
 import com.example.dietmaker.telas.Logout;
@@ -285,6 +288,5 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         AlertDialog alert = builder.create();
         alert.show();
     }
-
 
 }
