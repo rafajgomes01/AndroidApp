@@ -18,6 +18,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.dietmaker.adapter.AdapterNovaDieta;
 import com.example.dietmaker.classes.DietaPerderPeso;
+import com.example.dietmaker.telas.AddNovaDieta;
 import com.example.dietmaker.telas.GanhodePeso;
 import com.example.dietmaker.telas.Login;
 import com.example.dietmaker.telas.Logout;
@@ -287,6 +288,11 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
                 });
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    public void addNovaDieta(View view){
+        Intent it = new Intent(getApplicationContext(), AddNovaDieta.class);
+        startActivity(it);
     }
 
 }

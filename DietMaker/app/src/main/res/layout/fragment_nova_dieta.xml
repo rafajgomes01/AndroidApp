@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:orientation="vertical"
-    tools:context=".telas.NovaDieta">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_weight="8"
@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="5"
+            android:onClick="addNovaDieta"
             android:text="Adicionar" />
 
     </LinearLayout>

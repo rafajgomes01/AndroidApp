@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import com.example.dietmaker.R;
 import com.example.dietmaker.adapter.AdapterNovaDieta;
 import com.example.dietmaker.classes.DietaPerderPeso;
+import com.example.dietmaker.classes.Usuario;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,12 +49,13 @@ public class NovaDieta extends Fragment {
 
     // TODO: Rename and change types of parameters
     private RecyclerView recyclerView;
-    public static List<DietaPerderPeso> listaNovaDieta = new ArrayList<>();
+    private List<DietaPerderPeso> listaNovaDieta = new ArrayList<>();
 
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
-    public FirebaseAuth usuario = FirebaseAuth.getInstance();
+    DatabaseReference user = referencia.child("user");
 
     private OnFragmentInteractionListener mListener;
+
 
     public NovaDieta() {
         // Required empty public constructor
@@ -82,8 +84,6 @@ public class NovaDieta extends Fragment {
         super.onCreate(savedInstanceState);
 
 
-        DatabaseReference user = referencia.child("user");
-
 
         user.addValueEventListener(new ValueEventListener() {
             @Override
@@ -105,15 +105,48 @@ public class NovaDieta extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View meuLayout = inflater.inflate(R.layout.fragment_nova_dieta, container, false);
+        final View meuLayout = inflater.inflate(R.layout.fragment_nova_dieta, container, false);
         this.recyclerView = meuLayout.findViewById(R.id.recyNovaDieta);
-        AdapterNovaDieta novaDieta = new AdapterNovaDieta(listaNovaDieta);
+        final AdapterNovaDieta novaDieta = new AdapterNovaDieta(listaNovaDieta);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL));
         recyclerView.setAdapter(novaDieta);
         ((AppCompatActivity)getContext()).getSupportActionBar().setTitle("Crie Sua Dieta");
+
+        // loucura total
+
+        final DietaPerderPeso dietaPerderPeso = new DietaPerderPeso();
+
+        Usuario usuario = new Usuario();
+        usuario.setUid(FirebaseAuth.getInstance().getUid());
+
+        DatabaseReference teste = user.child(usuario.getUid());
+
+        DatabaseReference usuarioPesquisa = user.child(usuario.getUid());
+
+        usuarioPesquisa.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot objSnapshot:dataSnapshot.getChildren()){
+                    DietaPerderPeso dietaPerderPeso = objSnapshot.getValue(DietaPerderPeso.class);
+                    //Log.i("outro", dietaPerderPeso.getHorario());
+                    listaNovaDieta.add(dietaPerderPeso);
+                }
+
+                //recyclerView.setAdapter();
+
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
 
         NovaDieta();
         return meuLayout;
@@ -158,35 +191,14 @@ public class NovaDieta extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    public void NovaDieta() {
 
+    public void NovaDieta() {
         DietaPerderPeso dietaPerderPeso = new DietaPerderPeso("Café da manhã","Suco de laranja (1 Copo Pequeno)\t " +
                 "\nPão integral (Fatia: 1)\t " +
                 "\nRequeijão light (2 Ponta De Faca)\t" +
                 " \nFruta (não especificada) (Porcao: 1)\t","07:00");
         this.listaNovaDieta.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Lanche da manhã","Castanha do Pará sem sal (Unidade (4g): 1)\t \nUva passa (Colher de sopa cheia (18g): 1)\t","10:00");
-        this.listaNovaDieta.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Almoço", "Salada, de legumes, cozida no vapor (Colher de Sopa: 3)\t " +
-                "\nPeito de galinha ou frango Cozido(a) (File: 1)\t" +
-                " \nEspaguete, cozido, enriquecido, com sal (2 Pegador)\t " +
-                "\nMolho de tomate (3 Colher de sopa (20g))\t" +
-                " \nChocolate, meio amargo (Pedaço: 1)\t","12:00");
-        this.listaNovaDieta.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Lanche da tarde","Suco de abacaxi (Copo Americano: 1)\t \nPão de queijo (Unidade Pequena: 2)\t","16:00");
-        this.listaNovaDieta.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Jantar","Blanquet de peru (Fatia: 1)\t \nQueijo prato (Fatia: 1)\t \nRequeijão light (Ponta De Faca: 3)\t \nTomate (3 Fatia média (15g))\t \nAlface, americana, crua (Folha De Hortaliça: 3)\t \nPão integral (2 Fatia)\t \nSuco de uva integral (1 Copo pequeno (165ml))\t \nObs: Alface e tomate à vontade\n" +
-                "\n", "20:00");
-        this.listaNovaDieta.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Pós-treino","Banana, nanica, crua (Unidade: 1)\t \nObs: 1 banana\n" +
-                "\n", "21:30");
-        this.listaNovaDieta.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Ceia","Iogurte desnatado (1 Pote)\t \nAveia em flocos (1 Colher De Sopa)\t", "23:00");
-        this.listaNovaDieta.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Ceia","Iogurte desnatado (1 Pote)\t \nAveia em flocos (1 Colher De Sopa)\t", "23:00");
-        this.listaNovaDieta.add(dietaPerderPeso);
-        dietaPerderPeso = new DietaPerderPeso("Ceia","Iogurte desnatado (1 Pote)\t \nAveia em flocos (1 Colher De Sopa)\t", "23:00");
-        this.listaNovaDieta.add(dietaPerderPeso);
+
     }
 
 

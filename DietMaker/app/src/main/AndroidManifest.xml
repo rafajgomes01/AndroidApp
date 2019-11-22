@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/dietamakericone_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".telas.AddNovaDieta"></activity>
         <activity android:name=".telas.Login" />
         <activity android:name=".SplashActivity">
             <intent-filter>
