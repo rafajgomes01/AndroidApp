@@ -173,5 +173,4 @@ public class NovaDieta extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-
 }

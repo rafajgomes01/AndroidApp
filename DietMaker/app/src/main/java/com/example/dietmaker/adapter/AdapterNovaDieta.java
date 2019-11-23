@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -79,13 +80,27 @@ public class AdapterNovaDieta extends RecyclerView.Adapter<AdapterNovaDieta.MyVi
             titulo.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    listaNovaDieta.remove(listaNovaDieta.get(getAdapterPosition()));
-                    notifyItemChanged(getAdapterPosition());
-                    Usuario usuario = new Usuario();
-                    usuario.setUid(FirebaseAuth.getInstance().getUid());
+                    AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                    builder.setMessage("Deseja realmente excluir?")
+                            .setCancelable(false)
+                            .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    listaNovaDieta.remove(listaNovaDieta.get(getAdapterPosition()));
+                                    notifyItemChanged(getAdapterPosition());
+                                    Usuario usuario = new Usuario();
+                                    usuario.setUid(FirebaseAuth.getInstance().getUid());
 
-                    DatabaseReference dieta = user.child(usuario.getUid());
-                    dieta.setValue(listaNovaDieta);
+                                    DatabaseReference dieta = user.child(usuario.getUid());
+                                    dieta.setValue(listaNovaDieta);
+                                }
+                            })
+                            .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+                    AlertDialog alert = builder.create();
+                    alert.show();
                     return true;
                 }
             });
@@ -93,13 +108,27 @@ public class AdapterNovaDieta extends RecyclerView.Adapter<AdapterNovaDieta.MyVi
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    listaNovaDieta.remove(listaNovaDieta.get(getAdapterPosition()));
-                    notifyItemChanged(getAdapterPosition());
-                    Usuario usuario = new Usuario();
-                    usuario.setUid(FirebaseAuth.getInstance().getUid());
+                    AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                    builder.setMessage("Deseja realmente excluir?")
+                            .setCancelable(false)
+                            .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    listaNovaDieta.remove(listaNovaDieta.get(getAdapterPosition()));
+                                    notifyItemChanged(getAdapterPosition());
+                                    Usuario usuario = new Usuario();
+                                    usuario.setUid(FirebaseAuth.getInstance().getUid());
 
-                    DatabaseReference dieta = user.child(usuario.getUid());
-                    dieta.setValue(listaNovaDieta);
+                                    DatabaseReference dieta = user.child(usuario.getUid());
+                                    dieta.setValue(listaNovaDieta);
+                                }
+                            })
+                            .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+                    AlertDialog alert = builder.create();
+                    alert.show();
                     return true;
                 }
             });
