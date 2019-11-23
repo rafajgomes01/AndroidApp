@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -84,21 +85,6 @@ public class NovaDieta extends Fragment {
         super.onCreate(savedInstanceState);
 
 
-
-        user.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-
-
     }
 
     @Override
@@ -115,27 +101,26 @@ public class NovaDieta extends Fragment {
         recyclerView.setAdapter(novaDieta);
         ((AppCompatActivity)getContext()).getSupportActionBar().setTitle("Crie Sua Dieta");
 
-        // loucura total
 
         final DietaPerderPeso dietaPerderPeso = new DietaPerderPeso();
 
         Usuario usuario = new Usuario();
         usuario.setUid(FirebaseAuth.getInstance().getUid());
 
-        DatabaseReference teste = user.child(usuario.getUid());
-
         DatabaseReference usuarioPesquisa = user.child(usuario.getUid());
 
         usuarioPesquisa.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot objSnapshot:dataSnapshot.getChildren()){
-                    DietaPerderPeso dietaPerderPeso = objSnapshot.getValue(DietaPerderPeso.class);
-                    //Log.i("outro", dietaPerderPeso.getHorario());
-                    listaNovaDieta.add(dietaPerderPeso);
+                listaNovaDieta.clear();
+
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    DietaPerderPeso a = postSnapshot.getValue(DietaPerderPeso.class);
+                    listaNovaDieta.add(a);
                 }
 
-                //recyclerView.setAdapter();
+                AdapterNovaDieta adapterNovaDieta = new AdapterNovaDieta(listaNovaDieta);
+                recyclerView.setAdapter(adapterNovaDieta);
 
             }
 
@@ -146,9 +131,6 @@ public class NovaDieta extends Fragment {
             }
         });
 
-
-
-        NovaDieta();
         return meuLayout;
     }
 
@@ -189,16 +171,6 @@ public class NovaDieta extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-
-    public void NovaDieta() {
-        DietaPerderPeso dietaPerderPeso = new DietaPerderPeso("Café da manhã","Suco de laranja (1 Copo Pequeno)\t " +
-                "\nPão integral (Fatia: 1)\t " +
-                "\nRequeijão light (2 Ponta De Faca)\t" +
-                " \nFruta (não especificada) (Porcao: 1)\t","07:00");
-        this.listaNovaDieta.add(dietaPerderPeso);
-
     }
 
 

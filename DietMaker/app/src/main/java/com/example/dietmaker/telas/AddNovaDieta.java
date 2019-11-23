@@ -36,6 +36,8 @@ public class AddNovaDieta extends AppCompatActivity {
         dietaPerderPeso.setTitulo(editTitulo.getText().toString());
         dietaPerderPeso.setHorario(editHorario.getText().toString());
         dietaPerderPeso.setConteudo(editCont.getText().toString());
+        dietaPerderPeso.setExpanded(false);
+
 
         Usuario usuario = new Usuario();
         usuario.setUid(FirebaseAuth.getInstance().getUid());

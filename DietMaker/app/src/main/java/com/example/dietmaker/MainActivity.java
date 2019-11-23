@@ -39,6 +39,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFragmentInteractionListener, PerderPeso.OnFragmentInteractionListener, Logout.OnFragmentInteractionListener, NovaDieta.OnFragmentInteractionListener {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -294,5 +297,6 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
         Intent it = new Intent(getApplicationContext(), AddNovaDieta.class);
         startActivity(it);
     }
+
 
 }

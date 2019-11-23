@@ -87,15 +87,6 @@
             android:layout_marginBottom="10dp"
             android:text="Alterar" />
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="Excluir" />
-
     </LinearLayout>
 
 </LinearLayout>
