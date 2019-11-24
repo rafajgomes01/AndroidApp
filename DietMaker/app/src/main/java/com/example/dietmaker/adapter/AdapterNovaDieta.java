@@ -111,7 +111,6 @@ public class AdapterNovaDieta extends RecyclerView.Adapter<AdapterNovaDieta.MyVi
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-
                     listaNovaDieta.add(listaNovaDieta.get(getAdapterPosition()));
                     notifyItemChanged(getAdapterPosition());
                     Usuario usuario = new Usuario();
