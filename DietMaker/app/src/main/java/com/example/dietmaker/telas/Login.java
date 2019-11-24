@@ -22,6 +22,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
 
@@ -91,10 +94,22 @@ public class Login extends AppCompatActivity {
             usuario.createUserWithEmailAndPassword(mail, pass).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (!task.isSuccessful()) {
-                        Toast toast = Toast.makeText(Login.this, "Falha ao cadastrar", Toast.LENGTH_SHORT);
-                        toast.show();
-                    } else {
+                    if(password.length() <= 5 ) {
+                        password.setError("A senha deve conter mais de 6 caracteres");
+                        password.requestFocus();
+                    }
+                    else if(!task.isSuccessful()) {
+                        try {
+                            throw task.getException();
+                        }
+                        catch(FirebaseAuthUserCollisionException e) {
+                            Toast toast = Toast.makeText(Login.this, "Esse e-mail já existe", Toast.LENGTH_SHORT);
+                            toast.show();
+                        } catch(Exception e) {
+
+                        }
+                    }
+                    else {
                         Toast toast = Toast.makeText(Login.this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT);
                         toast.show();
                     }
