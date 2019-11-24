@@ -1,6 +1,8 @@
 package com.example.dietmaker.adapter;
 
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentSender;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.dietmaker.R;
 import com.example.dietmaker.classes.DietaPerderPeso;
 import com.example.dietmaker.classes.Usuario;
+import com.example.dietmaker.telas.AlterarDieta;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -60,7 +63,7 @@ public class AdapterNovaDieta extends RecyclerView.Adapter<AdapterNovaDieta.MyVi
         TextView conteudo;
         ConstraintLayout expandableLayout;
 
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             expandableLayout = itemView.findViewById(R.id.expandableLayout);
             horario = itemView.findViewById(R.id.txtHorario);
@@ -108,27 +111,14 @@ public class AdapterNovaDieta extends RecyclerView.Adapter<AdapterNovaDieta.MyVi
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                    builder.setMessage("Deseja realmente excluir?")
-                            .setCancelable(false)
-                            .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    listaNovaDieta.remove(listaNovaDieta.get(getAdapterPosition()));
-                                    notifyItemChanged(getAdapterPosition());
-                                    Usuario usuario = new Usuario();
-                                    usuario.setUid(FirebaseAuth.getInstance().getUid());
 
-                                    DatabaseReference dieta = user.child(usuario.getUid());
-                                    dieta.setValue(listaNovaDieta);
-                                }
-                            })
-                            .setNegativeButton("Não", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-                                }
-                            });
-                    AlertDialog alert = builder.create();
-                    alert.show();
+                    listaNovaDieta.add(listaNovaDieta.get(getAdapterPosition()));
+                    notifyItemChanged(getAdapterPosition());
+                    Usuario usuario = new Usuario();
+                    usuario.setUid(FirebaseAuth.getInstance().getUid());
+
+                    DatabaseReference dieta = user.child(usuario.getUid());
+                    dieta.setValue(listaNovaDieta);
                     return true;
                 }
             });

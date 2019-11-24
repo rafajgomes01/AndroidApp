@@ -2,7 +2,6 @@ package com.example.dietmaker.telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -26,9 +25,9 @@ public class AddNovaDieta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_nova_dieta);
 
-        editTitulo = findViewById(R.id.editTitulo);
-        editHorario = findViewById(R.id.editHorario);
-        editCont = findViewById(R.id.editCont);
+        editTitulo = findViewById(R.id.editAlterTitulo);
+        editHorario = findViewById(R.id.editAlterHorario);
+        editCont = findViewById(R.id.editAlterCont);
     }
 
     public void adicionar(View view){

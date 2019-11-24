@@ -9,9 +9,16 @@
         android:roundIcon="@mipmap/dietamakericone_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".telas.AddNovaDieta"></activity>
-        <activity android:name=".telas.Login" />
-        <activity android:name=".SplashActivity">
+        <activity
+            android:name=".telas.AlterarDieta"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".telas.AddNovaDieta"
+            android:screenOrientation="portrait" />
+        <activity android:name=".telas.Login"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +28,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
