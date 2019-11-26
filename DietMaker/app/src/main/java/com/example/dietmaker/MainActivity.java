@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity implements GanhodePeso.OnFra
 
     public void manualPdf(View view) {
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                Uri.parse("https://drive.google.com/file/d/16GOus6L1nHlo1ksG-QRyTbT_EmP9ghNH/view?usp=sharing"));
+                Uri.parse("https://drive.google.com/file/d/1m8SehBd0rNp6cDx53CJC_0RTzdpIo9uQ/view?usp=sharing"));
         startActivity(intent);
     }
 
