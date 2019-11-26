@@ -2,9 +2,12 @@ package com.example.dietmaker.telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.dietmaker.R;
@@ -14,12 +17,16 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AddNovaDieta extends AppCompatActivity {
+import java.util.Calendar;
+
+public class AddNovaDieta extends AppCompatActivity implements View.OnClickListener {
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
     DatabaseReference user = referencia.child("user");
     private EditText editTitulo;
     private EditText editHorario;
     private EditText editCont;
+    private int hora, minutos;
+    private Button btnHora;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,8 @@ public class AddNovaDieta extends AppCompatActivity {
         editTitulo = findViewById(R.id.editAlterTitulo);
         editHorario = findViewById(R.id.editAlterHorario);
         editCont = findViewById(R.id.editAlterCont);
+        btnHora = findViewById(R.id.btnHorario);
+        btnHora.setOnClickListener(this);
     }
 
     public void adicionar(View view) {
@@ -51,9 +60,6 @@ public class AddNovaDieta extends AppCompatActivity {
         } else if (cont.isEmpty()) {
             editCont.setError("Preencha o conteúdo");
             editCont.requestFocus();
-        } else if (horario.length() < 5) {
-            editHorario.setError("Preencha corretamente o horario");
-            editHorario.requestFocus();
         } else {
             Usuario usuario = new Usuario();
             usuario.setUid(FirebaseAuth.getInstance().getUid());
@@ -63,5 +69,20 @@ public class AddNovaDieta extends AppCompatActivity {
 
             finish();
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        final Calendar c = Calendar.getInstance();
+        hora = c.get(Calendar.HOUR_OF_DAY);
+        minutos = c.get(Calendar.MINUTE);
+
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
+                editHorario.setText(hourOfDay+":"+minute);
+            }
+        },hora,minutos,true);
+        timePickerDialog.show();
     }
 }

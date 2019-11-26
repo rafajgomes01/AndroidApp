@@ -10,9 +10,10 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
-        android:text="Adicione uma Nova dieta"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="48dp"
+        android:text="Adicione uma Nova Refeição"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/editAlterTitulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,13 +25,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="51dp"
+        android:layout_marginBottom="52dp"
         android:ems="10"
         android:hint="Titulo"
         android:inputType="textPersonName"
         android:maxLength="15"
         android:minLines="2"
-        app:layout_constraintBottom_toTopOf="@+id/editAlterHorario"
+        app:layout_constraintBottom_toTopOf="@+id/btnHorario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -40,16 +41,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="14dp"
         android:ems="10"
+        android:enabled="false"
         android:hint="Horario"
         android:inputType="time"
         android:maxLength="5"
-        app:layout_constraintBottom_toTopOf="@+id/editAlterCont"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editAlterTitulo" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnHorario"
+        app:layout_constraintEnd_toStartOf="@+id/btnHorario"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editAlterCont"
@@ -57,7 +57,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="51dp"
+        android:layout_marginBottom="45dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Conteúdo"
@@ -66,7 +66,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editAlterHorario" />
+        app:layout_constraintTop_toBottomOf="@+id/btnHorario" />
 
     <Button
         android:id="@+id/button2"
@@ -74,12 +74,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="44dp"
         android:onClick="adicionar"
         android:text="Adicionar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editAlterCont" />
+
+    <Button
+        android:id="@+id/btnHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="60dp"
+        android:text="Horario"
+        app:layout_constraintBottom_toTopOf="@+id/editAlterCont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editAlterHorario"
+        app:layout_constraintTop_toBottomOf="@+id/editAlterTitulo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
